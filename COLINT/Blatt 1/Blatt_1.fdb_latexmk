@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1681726575 "/Users/mike/Latex Workspace/SS23/COLINT/Main/template.tex" "template.pdf" "template" 1681726576
-  "/Users/mike/Latex Workspace/SS23/COLINT/Main/template.tex" 1681726575 3821 5a93ae8801b773189ec97247a544f678 ""
+["pdflatex"] 1681726651 "/Users/mike/Latex Workspace/SS23/COLINT/Blatt 1/Blatt_1.tex" "Blatt_1.pdf" "Blatt_1" 1681726652
+  "/Users/mike/Latex Workspace/SS23/COLINT/Blatt 1/Blatt_1.tex" 1681726651 3906 59aed954e50a007b7cdd325ebdb1466d ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1136768653 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
@@ -9,6 +9,7 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm" 1254269338 12088 d750ac78274fa7c9f73ba09914c04f8a ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm" 1254269338 12092 7b1546e2d096cfd5dcbd4049b0b1ec2e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm" 1254269338 12156 ca1ae6a3c8564e89597f1f993fba1608 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmex10.tfm" 1148093231 992 ce925c9346c7613270a79afbee98c070 ""
@@ -20,6 +21,7 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm" 1254269338 11868 4f81e9b6033c032bdaf9884f4d7ef412 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm" 1254269338 11888 6841b91e46b65cf41a49b160e6e74130 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm" 1254269338 11852 5a9022f105fd1ee2797df861e79ae9a0 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb" 1255129361 116908 1fca96723793882c2e0160350c192fc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb" 1255129361 113634 f99c44d58bae0863375faf0e1d74d612 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb" 1255129361 119752 1bd8d06e4079df624bf59ce3ad7c9aa6 ""
   "/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -123,11 +125,11 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1651666614 2826438 126f15db49a8013f7531d9bb2d524d16 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "template.aux" 1681726576 786 a2eb080e0b2b591df81d9ccd1655e665 "pdflatex"
-  "template.out" 0 -1 0 "pdflatex"
-  "template.tex" 1681726575 3821 5a93ae8801b773189ec97247a544f678 ""
+  "Blatt_1.aux" 1681726652 786 a2eb080e0b2b591df81d9ccd1655e665 "pdflatex"
+  "Blatt_1.out" 0 -1 0 "pdflatex"
+  "Blatt_1.tex" 1681726651 3906 59aed954e50a007b7cdd325ebdb1466d ""
   (generated)
-  "template.aux"
-  "template.log"
-  "template.out"
-  "template.pdf"
+  "Blatt_1.aux"
+  "Blatt_1.log"
+  "Blatt_1.out"
+  "Blatt_1.pdf"

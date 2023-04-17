@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.4)  17 APR 2023 12:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.4)  17 APR 2023 12:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/mike/Latex Workspace/SS23/COLINT/Main/template.tex"
-(/Users/mike/Latex Workspace/SS23/COLINT/Main/template.tex
+**"/Users/mike/Latex Workspace/SS23/COLINT/Blatt 1/Blatt_1.tex"
+(/Users/mike/Latex Workspace/SS23/COLINT/Blatt 1/Blatt_1.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -513,8 +513,8 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count317
 \l__pdf_internal_box=\box63
-) (./template.aux)
-\openout1 = `template.aux'.
+) (./Blatt_1.aux)
+\openout1 = `Blatt_1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
@@ -614,9 +614,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 98.
 LaTeX Info: Redefining \pageref on input line 98.
 LaTeX Info: Redefining \nameref on input line 98.
- (./template.out) (./template.out)
+ (./Blatt_1.out) (./Blatt_1.out)
 \@outlinefile=\write4
-\openout4 = `template.out'.
+\openout4 = `Blatt_1.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 101.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -650,23 +650,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./template.aux)
-Package rerunfilecheck Info: File `template.out' has not changed.
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Blatt_1.aux)
+Package rerunfilecheck Info: File `Blatt_1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17825 strings out of 478268
- 283450 string characters out of 5846348
- 584900 words of memory out of 5000000
- 35764 multiletter control sequences out of 15000+600000
- 491607 words of font info for 49 fonts, out of 8000000 for 9000
+ 17832 strings out of 478268
+ 283524 string characters out of 5846348
+ 586895 words of memory out of 5000000
+ 35766 multiletter control sequences out of 15000+600000
+ 497620 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,6n,76p,366b,343s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb>
-Output written on template.pdf (1 page, 47275 bytes).
+ 69i,6n,76p,368b,343s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb>
+Output written on Blatt_1.pdf (1 page, 70020 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
- 16 compressed objects within 1 object stream
- 2 named destinations out of 1000 (max. 500000)
+ 33 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
