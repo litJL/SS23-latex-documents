@@ -99,13 +99,74 @@
 \maketitle	
 %--Content--
 \section*{Aufgabe 1}
+\subsection*{a)}
+\begin{align*}
+\text{prec}@5&=\frac{ 3 }{ 5 } \\
+\text{prec}@10&=\frac{ 4 }{ 10 } \\
+\text{rec}@10&=\frac{ 2 }{ 3 } \\
+\text{F1}@10&=\frac{ 1 }{ 2 } 
+\end{align*}
+
+\subsection*{b)}
+Only when we don't consider all the documents in the result.
+
+\subsection*{c)}
+Dunno what they want from me
 
 \section*{Aufgabe 2}
+\subsection*{a)}
+to, was, a, All, were, or, him, either, is, only, try, not, they, are, tried, everyone, someone, people,
+
+\subsection*{b)}
+\begin{align*}
+\text{assassinate}&\rightarrow \text{Assassination}\\
+\text{Roman, Romans}&\rightarrow \text{Roman}\\
+\text{ruler, rulers}&\rightarrow \text{Ruler}\\
+\text{loyal}&\rightarrow \text{Loyalty}\\
+\text{hated}&\rightarrow \text{Hate}\\
+\text{Marcus}&\rightarrow \text{Marcus}\\
+\text{Caesar}&\rightarrow \text{Caesar}
+\end{align*}
+stemming means to return the word to its root, e.g. assassinate $\rightarrow $ assassin. So this is kinda wrong
+\subsection*{c) (Using the list from the solution)}
+d1: marcus assassin caesar \\
+d2: marcus rome \\
+d3: caesar rule rome loyal caesar hate \\
+d4: loyal people assassin rule loyal
 
 \section*{Aufgabe 3}
+\begin{tabular}{|c|c c c c c c c c|}
+  \hline			
+   & \text{marcus} & \text{caesar} & \text{assassin} & \text{rome} & \text{rule} & \text{loyal} & \text{hate} & \text{people} \\
+	\hline
+	$idf_{t,D}$ & 1 & 1 & 1 & 1 & 1 & 1 & 2 & 2 \\
+	\hline
+\end{tabular}
+\\\\
+\begin{tabular}{|c|c c c c c c c c|}
+  \hline			
+  $ntf_{t,d}$ & \text{marcus} & \text{caesar} & \text{assassin} & \text{rome} & \text{rule} & \text{loyal} & \text{hate} & \text{people} \\
+	\hline
+	d1 & $\frac{ 1 }{ 3 }$ & $\frac{ 1 }{ 3 }$ & $\frac{ 1 }{ 3 }$ & 0 & 0 & 0 & 0 & 0 \\
+	d2 & $\frac{ 1 }{ 2 }$ & 0 & 0 & $\frac{ 1 }{ 2 }$ & 0 & 0 & 0 & 0 \\
+	d3 & 0 & $\frac{ 1 }{ 3 }$ & 0 & $\frac{ 1 }{ 6 }$ & $\frac{ 1 }{ 6 }$ & $\frac{ 1 }{ 6 }$ & $\frac{ 1 }{ 6 }$ & 0 \\
+	d4 & 0 & 0 & $\frac{ 1 }{ 5 }$ & 0 & $\frac{ 1 }{ 5 }$ & $\frac{ 2 }{ 5 }$ & 0 & $\frac{ 1 }{ 5 }$ \\
+	\hline
+\end{tabular}
+\\\\
+\begin{tabular}{|c|c c c c c c c c|}
+  \hline			
+  $w_{t,d,D}$ & \text{marcus} & \text{caesar} & \text{assassin} & \text{rome} & \text{rule} & \text{loyal} & \text{hate} & \text{people} \\
+	\hline
+	d1 & $\frac{ 1 }{ 3 }$ & $\frac{ 1 }{ 3 }$ & $\frac{ 1 }{ 3 }$ & 0 & 0 & 0 & 0 & 0 \\
+	d2 & $\frac{ 1 }{ 2 }$ & 0 & 0 & $\frac{ 1 }{ 2 }$ & 0 & 0 & 0 & 0 \\
+	d3 & 0 & $\frac{ 1 }{ 3 }$ & 0 & $\frac{ 1 }{ 6 }$ & $\frac{ 1 }{ 6 }$ & $\frac{ 1 }{ 6 }$ & $\frac{ 1 }{ 3 }$ & 0 \\
+	d4 & 0 & 0 & $\frac{ 1 }{ 5 }$ & 0 & $\frac{ 1 }{ 5 }$ & $\frac{ 2 }{ 5 }$ & 0 & $\frac{ 2 }{ 5 }$ \\
+	\hline
+\end{tabular}
 
 \section*{Aufgabe 4}
-
+this one is just all of the above again why are you doing this to me. In the future i will do these tabular questions on paper because fuck these tables
 %--/Content--
 
 \end{document}
