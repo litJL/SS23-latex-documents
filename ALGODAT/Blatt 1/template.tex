@@ -14,10 +14,45 @@
 \begin{document}
 	\maketitle
 	\section*{Aufgabe \bn.1} 
+	\lstinputlisting[]{./code/test.txt}
+	Da die Elementaroperation in der Schleife enthalten ist, ist die Laufzeit $ \sum ^{ n } _{ i=0 } 1=n $. Das Ausführen einer Elementaroperation hat die Laufzeit 1 und wir führen diese in der Schleife $n$ mal aus, weshalb wir eine Laufzeit von $n$ haben.
 	\newpage
 	\section*{Aufgabe \bn.2}
+	\begin{align*}
+	\sum ^{ \infty } _{ i=1 } \left( \frac{ 3 }{ 2 } - \sum ^{ i } _{ j=0 }\left(\frac{ 1 }{ 3 } \right) ^{ j } \right) &= \sum ^{ \infty } _{ i=1 } \left( \frac{ 3 }{ 2 } + \frac{ (\frac{ 1 }{ 3 }) ^{ i+1 } -1  }{ \frac{ 2 }{ 3 }  }  \right) = \\
+  \sum ^{ \infty } _{ i=1 } \left( \frac{ 3 }{ 2 } \cdot \left( \frac{ 1 }{ 3 } \right)^{ i+1 }  \right) &= \sum ^{ \infty } _{ i=1 } \left( \frac{ 1 }{ 2 } \cdot \left( \frac{ 1 }{ 3 } \right)^{ i }  \right)= \\
+	= \frac{ 1 }{ 2 } \cdot \sum ^{ \infty } _{ i=1 } \left( \frac{ 1 }{ 3 } \right)^{ i } &= \frac{ 1 }{ 2 } \cdot \frac{ \frac{ 1 }{ 3 } }{ 1-\frac{ 1 }{ 3 } } = \frac{ 1 }{ 4 }  \\
+	\end{align*}
   \newpage
 	\section*{Aufgabe \bn.3}  
+	\subsection*{a)}
+	Aufeinanderfolgende Zeilen wurden Zusamengefasst, i.e. Zeile 1 bis 10 = 1-10.\\
+	Sequenz: 1-10, 3-10, 3-10, 3-6, 11-12 \\
+	Ergebnis: 6
+	\subsection*{b)}
+	Es wird die Funktion
+	\begin{align*}
+	f:\mathbb{N} ^{ * } &\rightarrow \mathbb{N} \\
+	n &\rightarrow n!
+	\end{align*}
+	durch das Programm berechnet. Es werden zudem $8+8(n-1)$ Operationen ausgeführt. 8 Standard Operationen die immer ausgeführt werden und 8 Operationen pro benötigten Loop.
+	\subsection*{c)}
+	
   \newpage
 	\section*{Aufgabe \bn.4}
+	\subsection*{a)}
+	Mit $f_1(n),f_2(n)\in O(g)$:
+	$$ f_1(n)+f_2(n) \in O(f_1(n)) + O(f_2(n))=O(f_1(n)+f_2(n))=O(\max\{g,g\})=O(g)$$
+	\subsection*{b)}
+	$\begin{pmatrix}n\\2\end{pmatrix}\in\Theta(n^2)$, Beweis mithilfe des Grenzwert Lemma:
+	$$
+	\frac{ n^2 }{ \frac{ n\cdot(n-1) }{ 2 } } = \frac{ 2n }{ n\cdot(n-1) } =\frac{ 2n }{ n-1 } =\frac{ 2n }{ n\cdot(1-\frac{ 1 }{ n } ) } =\frac{ 2 }{ 1-\frac{ 1 }{ n }  } \overset{n \rightarrow \infty}{=} \frac{ 2 }{ 1-0 } = 2
+	$$
+	Da eine Zahl zwischen 0 und $\infty$ rauskommt muss $\begin{pmatrix}n\\2\end{pmatrix}\in\Theta(n^2)$ laut dem Grenzwert Lemma.
+	\subsection*{c)}
+	\subsection*{d)}
+	\subsection*{e)}
+	
+	
+	
 \end{document}
