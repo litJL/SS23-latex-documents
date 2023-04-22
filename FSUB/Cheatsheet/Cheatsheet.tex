@@ -1,0 +1,284 @@
+\documentclass[a4paper]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{	amsmath, 
+		amssymb, 
+		hyperref, 
+		listing,
+		tabularx}
+		
+\usepackage[space,extendedchars]{grffile}
+\usepackage{verbatim}
+\usepackage{url,amsmath,amssymb,mathrsfs,enumerate,dsfont}
+\usepackage[space,extendedchars]{grffile}
+\usepackage{algorithm,algorithmic}
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{etoolbox}
+\usetikzlibrary{automata,arrows}
+\usepackage{fancyhdr}
+\usepackage{subfigure}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{framed}
+\usepackage{paralist}
+
+\usepackage{tikz}
+
+\usetikzlibrary{arrows,shapes, automata}
+
+\setkomafont{disposition}{\normalfont\bfseries}
+
+\title{LaTeX-Cheatsheet}
+\subtitle{Formale Sprachen und Berechenbarkeit}
+
+\author{Elena Yanakieva}
+\date{Sommersemester 2023}
+\begin{document}
+
+\maketitle
+
+
+\section*{Kapitel}
+Wenn Sie Kapitel machen wollen (z.B. für jede Augabe), benutzen Sie \textbf{\textbackslash section\{Kapitelname\}}.
+Um die Nummerierung wegzulassen, benutzen Sie \textbf{\textbackslash section*\{Kapitelname\}}. 
+\subsubsection*{Subkapitel}
+Sie können auch Sub- und Subsub...-Kapitel machen. Benutzen Sie dafür \textbf{\textbackslash subsection\{Kapitelname\}} usw. Der * funktioniert bei Subkapitel genauso.
+
+\section*{Liste}
+Um Auflistungen zu texen, benutzen Sie \textbf{\textbackslash begin\{itemize\}}
+
+\begin{itemize}
+    \item Itemized
+\end{itemize}
+
+oder \textbf{\textbackslash begin\{enumerate\}}. 
+
+\begin{enumerate}
+    \item Enumerated
+\end{enumerate}
+
+Sie können die default Werte ändern, um z.B. mit a), b)... oder (i),(ii)... usw. aufzuzählen indem Sie \textbf{[a)]} oder \textbf{[(i)]} benutzen.
+
+\begin{enumerate} [a)]
+    \item Beispiel
+    \item Beispiel
+\end{enumerate}
+
+\noindent \textbf{Vergessen Sie nicht am Ende auch \textbf{\textbackslash end\{itemize\}} und \textbf{\textbackslash end\{enumerate\}} zu setzen!!}
+
+\section*{Sonstiges}
+
+\subsection*{Zentriert schreiben}
+Wenn Sie etwas (z.b. Grammatikdefinition, Produktionsregeln usw.) zentriert schreiben wollen, benutzen Sie dafür \textbf{\textbackslash begin\{align*\}}. 
+
+  \begin{align*}
+  G = (V, \Sigma, P, S)
+  \end{align*}
+  
+    \begin{align*}
+    S &\rightarrow \epsilon | aSa | bbT | aaU | bSb | bb | aa\\
+    T &\rightarrow bbT | aaU\\
+    U &\rightarrow aaU | bbT \\
+    \end{align*}
+  
+\subsection*{Mathemodus}
+Wenn Sie eine Formel (oder auch eine Grammatik) mitten im Text $G = (V, \Sigma, P, S)$ definieren wollen, sollen Sie \$ am Anfang und \$ am Ende der Formel setzen, sonst wird Latex Fehler werfen.
+
+\subsection*{Tabellen}
+
+Tabellen sind oft nützlich und recht einfach zu setzen. Benutzen Sie dafür \\ \textbf{\textbackslash begin\{tabular\}\{c $\mid$ c$\mid$ c\}}. Die Anzahl an \textit{c} gibt an, wie viele Spalten die Tabelle hat. Die Linien zwischen die \textit{c}s geben an, dass eine Trennlinie zwischen die zwei Spalten trennen soll. Sie können die Linie auch weglassen oder so viele Linien setzen, wie Sie wollen. Um Trennlinien zwischen die Reihen zu setzen, benutzen Sie \textbf{\textbackslash hline} nach der gewünschten Reihe. Um eine Reihe einzugeben benutzen Sie so viele \textbf{\&} wie Spalten $- 1$ und schreiben Sie die Zelleneingabe vor und nach den \&. \\ Beispiel:
+
+\begin{center}
+\begin{tabular}{|c||cc|}
+\hline
+ a & b & c\\
+ \hline
+ d & e & f\\
+ g & h & i\\
+ \hline
+\end{tabular} 
+\end{center}
+
+\newpage
+
+Die Tabelle für den CYK-Algorithmus: \\
+
+\begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|} \cline{1-1}
+ & \multicolumn{5}{c}{} \\ 
+ & \multicolumn{5}{c}{} \\ \cline{1-2}
+ & & \multicolumn{4}{c}{} \\ 
+ & & \multicolumn{4}{c}{} \\ \cline{1-3}
+ & & & \multicolumn{3}{c}{} \\ 
+ & & & \multicolumn{3}{c}{} \\ \cline{1-4}
+ & & & & \multicolumn{2}{c}{} \\
+ & & & & \multicolumn{2}{c}{} \\ \cline{1-5}
+ & & & & & \multicolumn{1}{c}{} \\
+ & & & & & \multicolumn{1}{c}{} \\ \cline{1-6}
+ & & & & & \\ 
+  & & & & &   \\ \hline
+ & & & & & \\
+  & & & & &   \\ \hline
+\end{tabular}
+
+
+\subsection*{Automaten tikzen}
+
+Um Automaten mit LaTeX zu erstellen, gibt es einen package namens TikZ (\textbackslash usepackage{tikz} vor begin\{document\}).
+
+Um eine Tikzfigur zu erstellen, schreib man die Befehle innerhalb eines \textbackslash begin \{tikzpicture\} und \textbackslash end \{tikzpicture\} Blocks. \\
+Zu Beginn definiert man die Knoten (nodes) mit dem Befehl \[\text{\textbackslash node[state] (id)  \{text\};}\]
+Um einen Startknoten zu definieren, fügt man "initial" zum "state" hinzu:
+\[\text{\textbackslash node[initial, state] (id)  \{text\};}\]
+Um einen Endzustand zu definieren, fügt man "accepting" zum "state" hinzu:
+\[\text{\textbackslash node[state,accepting] (id)  \{text\};}\]
+In dem "id"-Feld weist man eine eindeutige id dem Knoten zu.  \\
+
+Als nächstes zeichnet man die Übergänge. 
+\[\text{(B) edge 	   	node[above] {1}	(C);}\]
+Das bedeutet "Knoten mit id B geht zum Knoten mit id C mit einer 1 und die 1 muss über dem Pfeil gezeichnet werden.  \\
+Um Schleifen zu erstellen kann man einen Pfad vom id zum selben id erstellen. Achtung: Nicht vergessen "loop [where]".
+\[\text{(A) edge [loop above] 	node {0,1} 	(A)}\]
+Hier steht "loop above" für "Zeichne eine Schleife über dem Knoten. Man kann statt "above" auch "below", "right", "left" benutzen. 
+Wenn man mehrere Pfade zwischen 2 Knoten hat, will man die Pfeilen bisschen biegen. Dafür kann man folgendes Befehl benutzen:
+\[\text{(B) edge [bend right = 30] 	node[above] {0} 	(A)}\]
+
+Seht euch das folgende Beispiel an. Spielt damit mal ein bisschen rum, dann seht ihr was passiert!
+
+\begin{tikzpicture}[node distance = 2cm, ->, >=stealth', thick]  
+  \node[initial,state] 		(A)              {$q_0$};
+  \node[state]         		(B) [right of=A] {$q_1$};
+  \node[state, accepting]    	(C) [right of=B] {$q_2$};
+ 
+ \path  (A) edge [bend right = 30]    node[below] {0} 	(B)
+	    (A) edge [loop above] 	node {0,1} 	(A)
+	    (B) edge [bend right = 30] 	node[above] {0} 	(A)
+	      (B) edge 	   	node[above] {1}	(C);
+\end{tikzpicture}
+
+\subsection*{Farbe ändern}
+Mithilfe von Latex können Sie Ihren Text mit einer Farbe markieren. Z.B. \textcolor{red}{rot} oder \textcolor{blue}{blau} oder auch \textcolor{yellow}{gelb}. Geben Sie dafür \textbackslash \{FARBENAME\}\{TEXT\}, wobei FARBENAME red,blue,yellow usw. sein kann und TEXT ist der Text, der mit der Farbe markiert werden soll.
+
+\subsection*{Bold \& Italics}
+\begin{itemize}
+    \item \textbf{bold} $\rightarrow$ \textbackslash textbf\{\} 
+    \item \textit{italics} $\rightarrow$ \textbackslash textit\{\}
+\end{itemize}
+
+\subsection*{Symbole}
+
+% \begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & \\
+ $\Sigma$ & \textbackslash Sigma\\
+ & \\
+ \hline& \\
+ $\Sigma^*$ & \textbackslash Sigma \textasciicircum *\\
+ & \\
+ \hline
+ & \\
+ $\epsilon$ & \textbackslash epsilon \\
+ & \\
+ \hline 
+ & \\
+ $\delta$ & \textbackslash delta \\
+ & \\
+ \hline
+ & \\
+ $\mid$ & \textbackslash mid \\
+ & \\
+ \hline
+ & \\
+ $\geq$ & \textbackslash geq\\
+ & \\
+ \hline
+ & \\
+ $\leq$ & \textbackslash leq \\
+ & \\
+ \hline
+ & \\
+ $\circ$ & \textbackslash circ \\
+ & \\
+ \hline
+ & \\
+ $\in$ & \textbackslash in \\
+ & \\
+ \hline
+ & \\
+ $\mathbb{N}$ & \textbackslash mathbb\{N\} \\
+ & \\
+ \hline
+ & \\
+ $\mathbb{N}_0$ & \textbackslash mathbb\{N\}\textunderscore 0 \\
+ & \\
+ \hline
+ & \\
+ $\mathbb{N}_{n \geq 1}$ & \textbackslash mathbb\{N\}\textunderscore \{n \textbackslash geq 1\} \\
+ & \\
+ \hline
+
+\end{tabular} 
+
+\begin{tabular}{|c|c|}
+ \hline
+ & \\
+ $\cup$ & \textbackslash cup \\
+ & \\
+ \hline
+  & \\
+ $\cap$ & \textbackslash cap \\
+ & \\
+ \hline
+ & \\
+ $\bigcup$ & \textbackslash bigcup \\
+ & \\
+ \hline
+ & \\
+ $\bigcup^{\infty}_{n=1}$ & \textbackslash bigcup \textasciicircum \{\textbackslash infty\}\textunderscore\{n=1\} \\
+ & \\
+ \hline
+ & \\
+ $\exists$ & \textbackslash exists \\
+ & \\
+  \hline
+  & \\
+  $\subset$ & \textbackslash subset \\
+  & \\
+  \hline
+  & \\
+  $\supset$ & \textbackslash supset \\
+  & \\
+  \hline
+  & \\
+  $\subseteq$ & \textbackslash subseteq \\
+  & \\
+  \hline
+  & \\
+  $\supseteq$ & \textbackslash supseteq \\
+  & \\
+  \hline
+  & \\
+  $\rightarrow$ & \textbackslash rightarrow \\
+  & \\
+ \hline
+ & \\
+ $\Rightarrow$ & \textbackslash Rightarrow \\
+ & \\
+ \hline
+ & \\
+ $\Rightarrow^n$ & \textbackslash Rightarrow \textasciicircum n \\
+ & \\
+ \hline
+ & \\
+ $\Rightarrow^n_G$ & \textbackslash Rightarrow \textasciicircum n \textunderscore G \\
+ & \\
+ \hline
+\end{tabular}
+% \end{center}
+
+\end{document}

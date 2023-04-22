@@ -3,8 +3,8 @@ entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/mike/Latex Workspace/SS23/ALGODAT/Main/template.tex"
-(/Users/mike/Latex Workspace/SS23/ALGODAT/Main/template.tex
+**"/Users/mike/Latex Workspace/SS23/ALGODAT/Blatt 1/template.tex"
+(/Users/mike/Latex Workspace/SS23/ALGODAT/Blatt 1/template.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -875,14 +875,14 @@ Package rerunfilecheck Info: File `template.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  28633 strings out of 478268
- 519930 string characters out of 5846348
+ 519939 string characters out of 5846348
  969666 words of memory out of 5000000
  46320 multiletter control sequences out of 15000+600000
  497620 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,11n,100p,560b,350s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,11n,100p,563b,350s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb>
-Output written on template.pdf (4 pages, 77424 bytes).
+Output written on template.pdf (4 pages, 76789 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream
