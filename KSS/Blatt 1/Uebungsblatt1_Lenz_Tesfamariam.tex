@@ -61,6 +61,8 @@
 	\title{#1}
 }
 
+\usepackage{cancel}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % REDUCING the white part
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,15 +94,82 @@
 \definecolor{darkblue}{RGB}{0,95,140}
 \definecolor{darkyellow}{RGB}{155,135,12}
 
-\submissiontitle{Blatt X - Übungsgruppe (TBD) -- Abgabegruppe TBD}
-\author{Mike Lenz} 
+\submissiontitle{Blatt 1 - Gruppe 3}
+\author{Mike Lenz, Jonas Tesfamariam} 
 
 \begin{document}
 \maketitle	
 %--Content--
 
-
-
-%--/Content--
+\section*{Aufgabe 1}
+\begin{align*}
+	\binom{n}{m}\binom{m}{k}&=\binom{n}{k}\binom{n-k}{m-k} \\
+  \frac{ n! }{ m!\cdot(n-m)! }\cdot \frac{ m! }{ k!\cdot(m-k)! } &= \frac{ n! }{ k!\cdot(n-k)! }\cdot \frac{ (n-k)! }{ (m-k)!\cdot((n-k)-(m-k))! } \\
+	\frac{ n! }{ \cancel{m!}\cdot(n-m)! }\cdot \frac{ \cancel{m!} }{ k!\cdot(m-k)! } &= \frac{ n! }{ k!\cdot\cancel{(n-k)!} }\cdot \frac{ \cancel{(n-k)!} }{ (m-k)!\cdot((n-k)-(m-k))! } \\ 
+	\frac{ n! }{ k!\cdot (n-m)!\cdot(m-k)! } &= \frac{ n! }{ k!\cdot (n-m)!\cdot(m-k)! } 
+\end{align*}
+Da auf beiden Seiten die gleiche Formel steht ist $\binom{n}{m}\binom{m}{k}=\binom{n}{k}\binom{n-k}{m-k}$ wahr. 
+\pagebreak
+\section*{Aufgabe 2}
+\subsection*{a)}
+$\binom{32}{6}$ ist die Anzahl aller möglichen Blätter und $\binom{8}{6}$ ist die Anzahl aller möglichen Blättern mit einer Farbe (Persönlich denken wir, dass z.B. Herz und Karo eine Farbe sein sollten aber in der Aufgabe ist jedes Symbol als eigene Farbe erwähnt). \\
+Die Wahrscheinlichkeit ein einzelnes bestimmtes Blatt zu ziehen ist 
+$\frac{ 1 }{ \binom{32}{6}}$
+Womit die Wahrscheinlichkeit ein Blatt zu ziehen, bei welchem alle Karten die selbe Farbe haben,
+$$
+\frac{ \binom{8}{6} }{ \binom{32}{6} } \approx 0,00003 = 0,003\%
+$$
+ist.
+\subsection*{b)}
+Für jeden Wert gibt es einen Drilling den man jedes Blatt ziehen kann, also gibt es 8 mögliche Drillinge pro Blatt. Da es 4 verschiedene Drillings-Kombinationen pro Farbe gibt multiplizieren wir mit 4. Wir brauchen lediglich zwei Drillinge, also gibt es
+$4\cdot\binom{8}{2}$ verschiedene Blätter mit zwei Drillingen.
+Die Wahrscheinlichkeit solch ein Blatt zu ziehen ist
+$$
+\frac{ 4\cdot\binom{8}{2} }{ \binom{32}{6} } \approx 0,0001 = 0,01\%
+$$
+\pagebreak
+\section*{Aufgabe 3}
+\subsection*{a)}
+Da $21=3\cdot7$ ist $T _{ 21 } \subset T _{ 7 } $, also kann 21 ausgelassen werden. Zudem, da 7,9 und 15 Teilerfremd sind, können wir vorgehen wie im Beispiel 1.3.4 vom Skript. \\
+Laut Siebformel ist
+$$|T_7\cup T_9\cup T _{ 15 } | = |T_{7}|+|T_{9}|+|T_{15}|-|T_{7}\cap T_{9}|-|T_{7}\cap T_{15}|-|T_{9}\cap T_{15}|+|T_{7}\cap T_{9}\cap T _{ 15 }|.$$
+Für $T_i$ gilt $|T_i|=\lfloor 10000/i\rfloor$ und wie in Beispiel 1.3.4 gilt $T_i \cap T_j = T_{i\cdot j}$. Also
+\begin{align*}
+&|T_{7}|=1428 \\
+&|T_{9}|=1111 \\
+&|T_{15}|=666 \\
+&|T_{7}\cap T_{9}| = T_{63} = 158\ |\ \text{Gleiches Prinzip bei Folgenden Mengen}\\
+&|T_{105}|=95 \\
+&|T_{135}|=74 \\
+&|T_{945}|=10 
+\end{align*}
+Somit ist
+$$
+|T_7\cup T_9\cup T _{ 15 } | = 1428+1111+666-158-95-74+10=2888
+$$
+\subsection*{b)}
+Wir definieren die Mengen E,F und L, wessen Elemente die Lehrer sind, die die Sprache unterrichten. Im Schnitt sind Lehrer enthalten, welche beide Sprachen unterrichten, z.B. in $E\cap F$ sind alle Lehrer die Englisch und Französisch unterrichten. Aus dem Text können wir folgern, dass
+\begin{align*}
+&|E|=21 \\
+&|F|=14 \\
+&|L|=18 \\
+&|E\cap L|=8 \\
+&|F\cap L|=4 \\
+&|E\cap F\cap L|=3 \\
+&|E\cup F\cup L|=39. \\
+\end{align*}
+Hiermit ist
+\begin{align*}
+|E\cup F\cup L| &= |E| + |F| + |L| - |E\cap L| - |F\cap L| - |E\cap F| + |E\cap F\cap L| \\
+39 &= 21+14+18-8-4-|E\cap F|+3 \\
+39 &= 44 -|E\cap F| \\
+39+|E\cap F| &= 44 \\
+|E\cap F| &= 5.
+\end{align*}
+Also gibt es 5 Lehrer, welche Englisch und Französisch unterrichten.
+\pagebreak
+\section*{Aufgabe 4}
+\pagebreak
+\section*{Aufgabe 5}
 
 \end{document}
