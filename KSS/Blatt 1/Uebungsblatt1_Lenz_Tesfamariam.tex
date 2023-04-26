@@ -138,14 +138,14 @@ Für $T_i$ gilt $|T_i|=\lfloor 10000/i\rfloor$ und wie in Beispiel 1.3.4 gilt $T
 &|T_{7}|=1428 \\
 &|T_{9}|=1111 \\
 &|T_{15}|=666 \\
-&|T_{7}\cap T_{9}| = T_{63} = 158\ |\ \text{Gleiches Prinzip bei Folgenden Mengen}\\
-&|T_{105}|=95 \\
-&|T_{135}|=74 \\
-&|T_{945}|=10 
+&|T_{7}\cap T_{9}| = |T_{\text{kgV(7,9)}}| = |T_{63}| = 158 \\
+&|T_{7}\cap T_{15}| = |T_{\text{kgV(7,15)}}| = |T_{105}| = 95 \\
+&|T_{9}\cap T_{15}| = |T_{\text{kgV(9,15)}}| = |T_{45}| = 222 \\
+&|T_{7}\cap T_{9}\cap T_{15}| = |T_{\text{kgV(7,9,15)}}| = |T_{315}| = 31 \\
 \end{align*}
 Somit ist
 $$
-|T_7\cup T_9\cup T _{ 15 } | = 1428+1111+666-158-95-74+10=2888
+|T_7\cup T_9\cup T _{ 15 } | = 1428+1111+666-158-95-222+31=2761
 $$
 \subsection*{b)}
 Wir definieren die Mengen E,F und L, wessen Elemente die Lehrer sind, die die Sprache unterrichten. Im Schnitt sind Lehrer enthalten, welche beide Sprachen unterrichten, z.B. in $E\cap F$ sind alle Lehrer die Englisch und Französisch unterrichten. Aus dem Text können wir folgern, dass
@@ -169,7 +169,13 @@ Hiermit ist
 Also gibt es 5 Lehrer, welche Englisch und Französisch unterrichten.
 \pagebreak
 \section*{Aufgabe 4}
+/
 \pagebreak
 \section*{Aufgabe 5}
-
+\lstinputlisting[language=Python, postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}, breaklines=true]{./code/aufgabe5.py}
+Wir haben unseren Code in Python geschrieben.
+Beispielausgaben: \\
+Für 500 $\rightarrow$ 146 \\
+Für 10000 $\rightarrow $ 2922 \\
+Für 123456 $\rightarrow $ 36075
 \end{document}

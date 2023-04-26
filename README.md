@@ -12,5 +12,5 @@ Hier sind alle Abgaben zu den Kursen im Sommersemester 2023.
 |COLINT:  | 1 ✅   |
 |ML1:     | -    |
 |FSUB:    | -    |
-|KSS:     | 1 🏗️   |
+|KSS:     | 1 ✅   |
 |INFOSYS: | -    |
