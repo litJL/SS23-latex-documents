@@ -8,7 +8,7 @@
 \input{general/packages}
 \input{general/layout}
 
-\submissiontitle{Blatt \bn{} - Übungsgruppe Y -- Abgabegruppe 04}
+\submissiontitle{Blatt \bn{} - Übungsgruppe (Mo - 13:45)  -- Abgabegruppe 04}
 \author{Giovanni Ngodji Djeuha, Mike Lenz, Jonas Tesfamariam,\\ Bastian Schmitt, Luca Winterkamp} 
 
 \begin{document}
@@ -27,7 +27,7 @@
 	\section*{Aufgabe \bn.3}  
 	\subsection*{a)}
 	Aufeinanderfolgende Zeilen wurden Zusamengefasst, i.e. Zeile 1 bis 10 = 1-10.\\
-	Sequenz: 1-10, 3-10, 3-10, 3-6, 11-12 \\
+	Sequenz: 1-10, 3-10, 3-6, 11-12 \\
 	Ergebnis: 6
 	\subsection*{b)}
 	Es wird die Funktion
@@ -37,7 +37,7 @@
 	\end{align*}
 	durch das Programm berechnet. Es werden zudem $8+8(n-1)$ Operationen ausgeführt. 8 Standard Operationen die immer ausgeführt werden und 8 Operationen pro benötigten Loop.
 	\subsection*{c)}
-	
+	Durch das umdefinieren des Zahlenbereichs von Registern können RAMZ Programme in RAM Programme umgewandelt werden. Spezifisch stellen Zahlen von 0 bis n/2 die negativen Zahlen (also -(n/2),...,-1) und die Zahlen von (n/2)+1 bis n die positiven Zahlen (also 0,...,(n/2)-1), wobei n der ursprüngliche Zahlenbereich der Register ist.
   \newpage
 	\section*{Aufgabe \bn.4}
 	\subsection*{a)}
@@ -46,7 +46,7 @@
 	\subsection*{b)}
 	$\begin{pmatrix}n\\2\end{pmatrix}\in\Theta(n^2)$, Beweis mithilfe des Grenzwert Lemma:
 	$$
-	\frac{ n^2 }{ \frac{ n\cdot(n-1) }{ 2 } } = \frac{ 2n^2 }{ n\cdot(n-1) } =\frac{ 2n }{ n-1 } =\frac{ 2n }{ n\cdot(1-\frac{ 1 }{ n } ) } =\frac{ 2 }{ 1-\frac{ 1 }{ n }  } \overset{n \rightarrow \infty}{=} \frac{ 2 }{ 1-0 } = 2
+	\lim _{ n \rightarrow \infty }  \frac{ n^2 }{ \frac{ n\cdot(n-1) }{ 2 } } = \lim _{ n \rightarrow \infty }\frac{ 2n^2 }{ n\cdot(n-1) } =\lim _{ n \rightarrow \infty }\frac{ 2n }{ n-1 } =\lim _{ n \rightarrow \infty }\frac{ 2n }{ n\cdot(1-\frac{ 1 }{ n } ) } =\lim _{ n \rightarrow \infty }\frac{ 2 }{ 1-\frac{ 1 }{ n }  } = \frac{ 2 }{ 1-0 } = 2
 	$$
 	Da eine Zahl zwischen 0 und $\infty$ rauskommt muss $\begin{pmatrix}n\\2\end{pmatrix}\in\Theta(n^2)$ laut dem Grenzwert Lemma.
 	\subsection*{c)}
