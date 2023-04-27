@@ -8,9 +8,9 @@ Hier sind alle Abgaben zu den Kursen im Sommersemester 2023.
 
 | Kurs    | Blatt|
 |--------:|:----:|
-|ALGODAT: | 1 ✅   |
-|COLINT:  | 1 ✅   |
+|ALGODAT: | 2 🏗️   |
+|COLINT:  | 2 🏗️   |
 |ML1:     | -    |
 |FSUB:    | 1 🏗️   |
-|KSS:     | 1 ✅   |
+|KSS:     | 2 🏗️   |
 |INFOSYS: | 1 🏗️    |
