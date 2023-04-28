@@ -9,14 +9,16 @@
 \input{general/layout}
 
 \submissiontitle{Blatt \bn{} - Übungsgruppe (Mo - 13:45)  -- Abgabegruppe 04}
-\author{Giovanni Ngodji Djeuha, Mike Lenz, Jonas Tesfamariam,\\ Bastian Schmitt, Luca Winterkamp} 
+\author{Giovanni Ngodji Djeuha, Mike Lenz, Jonas Tesfamariam,\\ Bastian Schmitt, Luca Winterkamp}
 
 \begin{document}
 	\maketitle
-	\section*{Aufgabe \bn.1} 
+
+	\section*{Aufgabe \bn.1}
 	\lstinputlisting[]{./code/test.txt}
 	Da die Elementaroperation in der Schleife enthalten ist, ist die Laufzeit $ \sum ^{ n } _{ i=0 } 1=n $. Das Ausführen einer Elementaroperation hat die Laufzeit 1 und wir führen diese in der Schleife $n$ mal aus, weshalb wir eine Laufzeit von $n$ haben.
 	\newpage
+
 	\section*{Aufgabe \bn.2}
 	\begin{align*}
 	\sum ^{ \infty } _{ i=1 } \left( \frac{ 3 }{ 2 } - \sum ^{ i } _{ j=0 }\left(\frac{ 1 }{ 3 } \right) ^{ j } \right) &= \sum ^{ \infty } _{ i=1 } \left( \frac{ 3 }{ 2 } + \frac{ (\frac{ 1 }{ 3 }) ^{ i+1 } -1  }{ \frac{ 2 }{ 3 }  }  \right) = \\
@@ -24,11 +26,13 @@
 	= \frac{ 1 }{ 2 } \cdot \sum ^{ \infty } _{ i=1 } \left( \frac{ 1 }{ 3 } \right)^{ i } &= \frac{ 1 }{ 2 } \cdot \frac{ \frac{ 1 }{ 3 } }{ 1-\frac{ 1 }{ 3 } } = \frac{ 1 }{ 4 }  \\
 	\end{align*}
   \newpage
-	\section*{Aufgabe \bn.3}  
+
+	\section*{Aufgabe \bn.3}
 	\subsection*{a)}
 	Aufeinanderfolgende Zeilen wurden Zusamengefasst, i.e. Zeile 1 bis 10 = 1-10.\\
 	Sequenz: 1-10, 3-10, 3-6, 11-12 \\
 	Ergebnis: 6
+
 	\subsection*{b)}
 	Es wird die Funktion
 	\begin{align*}
@@ -36,21 +40,26 @@
 	n &\rightarrow n!
 	\end{align*}
 	durch das Programm berechnet. Es werden zudem $8+8(n-1)$ Operationen ausgeführt. 8 Standard Operationen die immer ausgeführt werden und 8 Operationen pro benötigten Loop.
+
 	\subsection*{c)}
-	Durch das umdefinieren des Zahlenbereichs von Registern können RAMZ Programme in RAM Programme umgewandelt werden. Spezifisch stellen Zahlen von 0 bis n/2 die negativen Zahlen (also -(n/2),...,-1) und die Zahlen von (n/2)+1 bis n die positiven Zahlen (also 0,...,(n/2)-1), wobei n der ursprüngliche Zahlenbereich der Register ist.
+	Durch das umdefinieren des Zahlenbereichs von Registern können RAMZ Programme in RAM Programme umgewandelt werden. Spezifisch stellen Zahlen von 0 bis n/2 die negativen Zahlen (also -(n/2),$ \ldots $,-1) und die Zahlen von (n/2)+1 bis n die positiven Zahlen (also 0,$ \ldots $,(n/2)-1), wobei n der ursprüngliche Zahlenbereich der Register ist.
   \newpage
+
 	\section*{Aufgabe \bn.4}
 	\subsection*{a)}
 	Mit $f_1(n),f_2(n)\in O(g)$:
-	$$ f_1(n)+f_2(n) \in O(f_1(n)) + O(f_2(n))=O(f_1(n)+f_2(n))=O(\max\{g,g\})=O(g)$$
+	\[ f_1(n)+f_2(n) \in O(f_1(n)) + O(f_2(n))=O(f_1(n)+f_2(n))=O(\max\{g,g\})=O(g)\]
+
 	\subsection*{b)}
 	$\begin{pmatrix}n\\2\end{pmatrix}\in\Theta(n^2)$, Beweis mithilfe des Grenzwert Lemma:
-	$$
-	\lim _{ n \rightarrow \infty }  \frac{ n^2 }{ \frac{ n\cdot(n-1) }{ 2 } } = \lim _{ n \rightarrow \infty }\frac{ 2n^2 }{ n\cdot(n-1) } =\lim _{ n \rightarrow \infty }\frac{ 2n }{ n-1 } =\lim _{ n \rightarrow \infty }\frac{ 2n }{ n\cdot(1-\frac{ 1 }{ n } ) } =\lim _{ n \rightarrow \infty }\frac{ 2 }{ 1-\frac{ 1 }{ n }  } = \frac{ 2 }{ 1-0 } = 2
-	$$
+	\begin{align*}
+	\lim _{ n \rightarrow \infty }  \frac{ n^2 }{ \frac{ n\cdot(n-1) }{ 2 } } = \lim _{ n \rightarrow \infty }\frac{ 2n^2 }{ n\cdot(n-1) } =\lim _{ n \rightarrow \infty }\frac{ 2n }{ n-1 } \\
+	=\lim _{ n \rightarrow \infty }\frac{ 2n }{ n\cdot(1-\frac{ 1 }{ n } ) } =\lim _{ n \rightarrow \infty }\frac{ 2 }{ 1-\frac{ 1 }{ n }  } = \frac{ 2 }{ 1-0 } = 2
+	\end{align*}
 	Da eine Zahl zwischen 0 und $\infty$ rauskommt muss $\begin{pmatrix}n\\2\end{pmatrix}\in\Theta(n^2)$ laut dem Grenzwert Lemma.
+
 	\subsection*{c)}
 	\subsection*{d)}
 	\subsection*{e)}
-	
+
 \end{document}

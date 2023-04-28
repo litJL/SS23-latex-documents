@@ -1,0 +1,22 @@
+\chapter{Systemtestfälle}
+
+Hier sollen verschiedene Szenarien beschrieben werden, mithilfe deren Sie später Systemtests ausführen und die erwarteten Ergebnisse darstellen.
+
+\newcounter{tf}\setcounter{tf}{10}
+
+\begin{description}[leftmargin=5em, style=sameline]
+
+\begin{lhp}{tf}{TF}{tests:anmelden}
+	\item [Name:] Spieler anmelden.
+	\item [Motivation:] Testet, ob die Anmeldung in das System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Zugriffsdaten sind vorhanden und richtig} \\ $\implies$ Spieler wird in die Lobby bewegt.
+			\item \textit{Benutzername ist registriert, Passwort ist falsch} \\ $\implies$ Fehlermeldung wird angezeigt.
+			\item \textit{Benutzername ist nicht registriert} \\ $\implies$ Fehlermeldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff}
+	\item [Relevante Use Cases:] \ref{uc:anmeld}
+\end{lhp}
+
+\end{description}
