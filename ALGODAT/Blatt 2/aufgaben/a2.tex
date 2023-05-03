@@ -1,2 +1,30 @@
-	\section*{Aufgabe \bn.2}
-	\newpage
+\section*{Aufgabe \bn.2}
+Grenzwert Lemma wird hier mit GL abgekürzt
+\subsection*{a)}
+	$ 2^n \in o(3^n) $ \\
+	da mithilfe GL $ lim _{ n \rightarrow \infty } \frac{ 2^n }{ 3^n } = 0  $
+\subsection*{b)}
+	$ 2^{n+1}\in \Theta(2^n) $ \\ 
+	da mithilfe GL $ lim _{ n \rightarrow \infty } \frac{ 2^{n+1} }{ 2^n } = lim _{ n \rightarrow \infty } \frac{ \cancel{2^n}\cdot 2 }{ \cancel{2^n} } $ = 2
+\subsection*{c)}
+	$\log(n) \in o(\sqrt{n})$
+\subsection*{d)}
+	$ sin(2^n)+\pi \in \Theta(1) $\\
+	da $ -1 \le sin(x) \le 1 $ gilt erhalten wir $ -1 + \pi \le sin(2^n)+\pi\le 1+\pi $ \\
+	somit muss $ sin(2^n)+\pi\in\Theta(1) $ sein da es konstant ist.
+\subsection*{e)}
+	$ 2 ^{ \log_2(n\cdot2^n) } \in\omega(log(n)\cdot2^n)$ \\
+	$ 2 ^{ \log_2(n\cdot2^n) } = n\cdot 2^n \overset{\text{GL}}{\rightarrow } \lim _{ n \rightarrow \infty } \frac{ n\cdot \cancel{2^n}}{ log(n)\cdot\cancel{2^n} } = \infty $ \\
+	da n schneller wächst als log(n)
+\subsection*{f)}
+$ n^n\in\omega(e^n) $ \\
+da mithilfe GL $ \lim _{ n \rightarrow \infty } \frac{ n^n }{ e^n } =\infty $; $ n^n $ wächst klar schneller als $ e^n $ da die Basis mitwächst.
+\subsection*{g)}
+$ \sqrt[n]{n}\in\omega(\frac{ 1 }{ n } ) $ \\
+da mithilfe GL $ \lim _{ n \rightarrow \infty } \frac{ \sqrt[n]{n} }{ \frac{ 1 }{ n }  } = \lim _{ n \rightarrow \infty } \sqrt[n]{n} \cdot n = \infty $; $ \sqrt[n]{n} $ wird nie kleiner als 1
+\subsection*{h)}
+$ n\in o(2 ^{ (\log_2(n))^2 } ) $\\
+$ 2 ^{ (\log_2(n))^2 } = 2 ^{ \log_2(n)\cdot\log_2(n) } = (2 ^{ \log_2(n) })^{\log_2(n)} = n ^{ \log_2(n) } $ \\
+mithilfe GL $ \lim _{ n \rightarrow \infty } \frac{ n }{ n ^{ \log_2(n) }  } = 0$; $ n ^{ \log_2(n) } $ wächst klar schneller 
+\subsection*{i)}
+$ (\log(n))^n\in\omega(n^{\log(n)}) $

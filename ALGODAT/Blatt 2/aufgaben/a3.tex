@@ -1,1 +1,9 @@
 	\section*{Aufgabe \bn.3}
+	Wir definieren $p'(n)=a _{ d-1 } n^{ d-1 } + \dots + a_1n+a_0 $ \\
+	Laut Grenzwert lemma gilt $ p'(n)\in o(n^d) $ da:
+	\[
+		\lim _{ n \rightarrow \infty } \frac{ p'(n) }{ n^d } =
+		\lim _{ n \rightarrow \infty } \frac{ a _{ d-1 } n^{ d-1 } + \dots + a_1n+a_0 }{ n^d } = 0
+	\]
+	Hiermit gilt für $ p(n) $, dass
+	\[p(n)=a_dn^d + p'(n) = a_dn^d + o(n^d)\]

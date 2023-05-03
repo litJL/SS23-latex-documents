@@ -1,2 +1,28 @@
-	\section*{Aufgabe \bn.1}
-	\newpage
+\section*{Aufgabe \bn.1}
+\subsection*{a)}
+$ T_i(n) $ Laufzeit an Stelle i im Code (für Schleifen)
+\begin{align*}
+	T_4(i) &= c_2 + \sum _{ j=i+1 } ^{ n-1 } c_1 \\
+	T_3(n) &= c_3 + \sum _{ j=0 } ^{ n-1 } T_4(i) \\
+	\iff T_3(n) &= c_3 \sum _{ j=0 } ^{ n-1 } \left(c_2 + \sum _{ j=i+1 } ^{ n-1 } c_1\right) \\
+	\iff T_3(n) &= c_3 \sum _{ j=0 } ^{ n-1 } (c_2) + \sum _{ j=0 } ^{ n-1 } \sum _{ j=i+1 } ^{ n-1 } (c_1) \\
+\end{align*}
+Wir observieren, was bei $\sum _{ j=0 } ^{ n-1 } \sum _{ j=i+1 } ^{ n-1 } (c_1)$ passiert:
+\begin{align*}
+	&nc_1 + (n-1)c_1 + (n-2)c_1 + \dots + c_1 = \\
+	&c_1(n+(n-1)+(n-2)+\dots+1) = \\
+	&c_1\cdot \frac{ n(n+1) }{ 2 } = \frac{ 1 }{ 2 } (n^2+n)c_1
+\end{align*}
+Somit erhalten Wir
+\begin{align*}
+	T_3(n) &= c_3 + nc_2 + \frac{ 1 }{ 2 } (n^2+n)c_1 \\
+	\iff T_3(n) &= c_3 + nc_2 + \frac{ 1 }{ 2 } nc_1 + \frac{ 1 }{ 2 } n^2c_1 \\
+	T(n) &= T_3(n)
+\end{align*}
+Da der höchste Grad des Polynoms 2 ist, gilt $ T(n) \in O(n^2) $. \\
+Für die genaue Laufzeit setzen wir für die Konstanten die Anzahl der Zeilen, die diese repräsentieren, ein: $ c_1 = 4; c_2 = 1; c_3 = 2 $. Somit erhalten wir:
+\[
+	2+n\cdot1+ \frac{ 1 }{ 2 } n\cdot 4 + \frac{ 1 }{ 2 } n^2\cdot 4 = 2 + 3n + 2n^2
+\]
+Der Algorithmus hat eine genaue Laufzeit von $ 2n^2 + 3n + 2 $.
+\subsection*{b)}
