@@ -1,1 +1,20 @@
 \section*{Aufgabe 2}
+\subsection*{a)}
+Wir definieren die Menge der Kinder $K$ mit $ |K|=13=n $ und die Menge der \\
+Teams $ T $ mit $ |T|=3=m $. Mithilfe der Formel von 1.8.1 aus dem Skript erhalten wir:
+\begin{align*}
+  &\sum_{k=0}^{m}(-1) ^{ k } \binom{m}{k}(m-k)^n = \sum_{k=0}^{3}(-1) ^{ k } \binom{3}{k}(3-k)^{13} = \\
+  &1\cdot \binom{3}{0}(3-0)^{13} - 1\cdot \binom{3}{1}(3-1)^{13} + 1\cdot \binom{3}{2}(3-2)^{13} - 1\cdot \binom{3}{3}(3-3)^{13} = \\
+  &3^{13} - 3\cdot 2^{13} + 3 \cdot 1^{13} = 1569750
+\end{align*}
+Es gibt also 1569750 Möglichkeiten die Kinder in Gruppen einzuteilen.
+\subsection*{b)}
+Wir definieren die Menge der Würfe $ W $ mit $|W| = n \ge 6$ und die Menge der möglichen Werte $ E $ mit $ |E|=6 $. Wir wollen nun berechnen wieviele Versuche mit $n\ge 6 = m$ Würfen es gibt, bei denen jede Zahl mindestens einmal geworfen wurde. Dies wird nochmals mithilfe der Formel von 1.8.1 aus dem Skript gemacht:
+\begin{align*}
+  &\sum_{k=0}^{m}(-1) ^{ k } \binom{m}{k}(m-k)^n = \sum_{k=0}^{6}(-1) ^{ k } \binom{6}{k}(6-k)^n = \\
+  &6^n-6\cdot5^n+15\cdot4^n-20\cdot3^n+15\cdot2^n-6 = A
+\end{align*}
+Wir kürzen das Ergebnis mit A ab sodass wir die ganze Formel nicht nochmal hinschreiben müssen. Nun müssen wir lediglich die Anzahl aller möglichen Versuche mit $ n\ge6 $ Würfen bestimmen. Da wir für jeden Wurf 6 mögliche Zahlen haben und wir n mal werfen ist diese Anzahl $ 6^n $. Somit ist die Wahrscheinlichkeit bei $ n\ge6 $ Würfen jede Zahl mindestens einmal zu würfeln:
+\[
+  \frac{ A }{ 6^n }
+\]
