@@ -16,7 +16,7 @@
 		\item [Name:] Plattformunabhängigkeit
 		\item [Beschreibung:] Es soll sich um eine plattformunabhängige Anwendung handeln. Zumindest Windows- und Linuxsysteme sind zu unterstützen.
 		\item [Motivation:] Aufgabenstellung v. SEP.
-		\item [Erfüllungskriterium:]
+		\item [Erfüllungskriterium:] Verwendung von Java ermöglicht dies \ref{beschr:implsprache} % CUSTOM LINE
 	\end{lhp}
 \end{description}
 
@@ -39,7 +39,7 @@
 		\item [Name:] Technische Fähigkeiten
 		\item [Beschreibung:] Besondere technische Fähigkeiten sind von den Benutzern nicht zu erwarten.
 		\item [Motivation:] Auch die Menschen, die kaum etwas von Bedienung bzw. Programmierung von Rechnern verstehen, sollen fähig sein, das System zu verwenden.
-		\item [Erfüllungskriterium:]
+		\item [Erfüllungskriterium:] Implementierung eines einfach verständlichen GUI. % CUSTOM LINE
 	\end{lhp}
 \end{description}
 
@@ -63,7 +63,7 @@
 		\item [Name:] Lauffähigkeit an SCI-Rechnern
 		\item [Beschreibung:] Das Produkt muss auf einem eigenem Gerät lauffähig sein, welches zur Präsentation am Ende des SEP genutzt werden muss. Falls keine eigenen Rechner vorhanden sind, stehen auch die SCI-Terminals zur Verfügung.
 		\item [Motivation:] Optimierung von Betreuung und Abnahme des SEP
-		\item [Erfüllungskriterium:] 
+		\item [Erfüllungskriterium:] Testen der Applikation auf SCI-Rechnern. % CUSTOM LINE
 	\end{lhp}
 \end{description}
 
@@ -87,7 +87,7 @@
 		\item [Name:] Installationsanleitung	
 		\item [Beschreibung:] Falls die Installation nicht lediglich das Öffnen einer Datei voraussetzt, muss der genaue Installations- und Startvorgang schriftlich für Benutzer zur Verfügung gestellt werden.
 		\item [Motivation:] Spezifikation
-		\item [Erfüllungskriterium:] 
+		\item [Erfüllungskriterium:] Mitführen einer Installationsanleitung % CUSTOM LINE
 	\end{lhp}
 \end{description}
 
@@ -98,7 +98,7 @@
 		\item [Name:] Keine weitere Versionen
 		\item [Beschreibung:] Nach Version 1.0 ist keine weitere Entwicklung vorgesehen.
 		\item [Motivation:] Das ist nur das SEP, kein Geschäftsprojekt, siehe \ref{fa:fortentwicklung}
-		\item [Erfüllungskriterium:] 
+		\item [Erfüllungskriterium:] Nach Version 1.0 nicht mehr weiterentwickeln. % CUSTOM LINE
 	\end{lhp}
 \end{description}
 
@@ -106,20 +106,20 @@
 
 \subsection{Wartungsanforderungen}
 
-\begin{description}[leftmargin=5em, style=sameline]	
-	\begin{lhp}{nf}{NF}{nfunk:beispiel4}
-		\item [Name:] Beispiel
-		\item [Beschreibung:] 
-		\item [Motivation:] 
-		\item [Erfüllungskriterium:] 
-	\end{lhp}
-\end{description}
+% \begin{description}[leftmargin=5em, style=sameline]	
+% 	\begin{lhp}{nf}{NF}{nfunk:beispiel4}
+% 		\item [Name:] Beispiel
+% 		\item [Beschreibung:] 
+% 		\item [Motivation:] 
+% 		\item [Erfüllungskriterium:] 
+% 	\end{lhp}
+% \end{description} %This seems to be a leftover
 
 \begin{description}[leftmargin=5em, style=sameline]	
 	\begin{lhp}{nf}{NF}{nfunk:doku}
 		\item [Name:] Dokumentation
 		\item [Beschreibung:] Der Quellcode muss ausführlich dokumentiert werden.
-		\item [Motivation:] 
+		\item [Motivation:] Verständnis des Codes für neue Entwickler und Betreuer % CUSTOM LINE
 		\item [Erfüllungskriterium:] JavaDoc 
 	\end{lhp}
 \end{description}
@@ -128,7 +128,7 @@
 	\begin{lhp}{nf}{NF}{nfunk:doku}
 		\item [Name:] Testen
 		\item [Beschreibung:] Der Quellcode außer GUI muss gut getestet werden.
-		\item [Motivation:] 
+		\item [Motivation:] Code soll so wie erwartet laufen % CUSTOM LINE
 		\item [Erfüllungskriterium:] Von Unit-Tests muss mindestens 70\% des Quellcodes bedeckt werden. GUI-Klassen sind aus der Anforderung ausgenommen.
 	\end{lhp}
 \end{description}
@@ -137,7 +137,7 @@
 
 \begin{description}[leftmargin=5em, style=sameline]	
 	\begin{lhp}{nf}{NF}{nfunk:beispiel5}
-		\item [Name:] Beispiel
+		\item [Name:] Wartung der Applikation % CUSTOM LINE
 		\item [Beschreibung:] Es ist keine technische und fachliche Unterstützung des Systems geplant.
 		\item [Motivation:] Siehe \ref{fa:fortentwicklung}.
 		\item [Erfüllungskriterium:] Nicht anwendbar.
@@ -148,10 +148,10 @@
 
 \begin{description}[leftmargin=5em, style=sameline]	
 	\begin{lhp}{nf}{NF}{nfunk:beispiel6}
-		\item [Name:] Beispiel
-		\item [Beschreibung:] 
-		\item [Motivation:] 
-		\item [Erfüllungskriterium:] 
+		\item [Name:] Niedrige Systemanforderungen % CUSTOM LINE
+		\item [Beschreibung:] Designen der Applikation, sodass diese wenige Systemressourcen verwendet. % CUSTOM LINE
+		\item [Motivation:] Nicht jeder hat einen guten PC % CUSTOM LINE
+		\item [Erfüllungskriterium:] Konservative Nutzung von Systemressourcen
 	\end{lhp}
 \end{description}
 
@@ -161,10 +161,10 @@
 
 \begin{description}[leftmargin=5em, style=sameline]	
 	\begin{lhp}{nf}{NF}{nfunk:beispiel7}
-		\item [Name:] Beispiel
-		\item [Beschreibung:] 
-		\item [Motivation:] 
-		\item [Erfüllungskriterium:] 
+		\item [Name:] Account benötigt % CUSTOM LINE
+		\item [Beschreibung:] Das Spiel kann nur mit einem Account gespielt werden. % CUSTOM LINE
+		\item [Motivation:] Ohne Account funktionieren bestimmte Systemfunktionen nicht. Zudem können Bestenlisten Einträge nicht erfasst werden. % CUSTOM LINE
+		\item [Erfüllungskriterium:] Verwendung eines Accounts benötigen. % CUSTOM LINE
 	\end{lhp}
 \end{description}
 
@@ -172,10 +172,10 @@
 
 \begin{description}[leftmargin=5em, style=sameline]	
 	\begin{lhp}{nf}{NF}{nfunk:beispiel8}
-		\item [Name:] Beispiel
-		\item [Beschreibung:] 
-		\item [Motivation:] 
-		\item [Erfüllungskriterium:] 
+		\item [Name:] Stabilität % CUSTOM LINE
+		\item [Beschreibung:] Die Applikation ist zum Großteil stabil und stürzt in nur wenigen Fällen ab. % CUSTOM LINE
+		\item [Motivation:] Benutzerzufriedenheit % CUSTOM LINE
+		\item [Erfüllungskriterium:] Einfache Quality Assurance % CUSTOM LINE
 	\end{lhp}
 \end{description}
 
@@ -183,10 +183,19 @@
 
 \begin{description}[leftmargin=5em, style=sameline]	
 	\begin{lhp}{nf}{NF}{nfunk:beispiel9}
-		\item [Name:] Beispiel
-		\item [Beschreibung:] 
-		\item [Motivation:] 
-		\item [Erfüllungskriterium:] 
+		\item [Name:] Keine Ausgabe von Spielerdaten % CUSTOM LINE
+		\item [Beschreibung:] Jegliche gesammelte Daten von Spielern werden außerhalb der Anwendung in der Applikation nicht weitergegeben (z.B. Nutzername, Passwort etc.). % CUSTOM LINE
+		\item [Motivation:] Gesetz und moralische Vorschrift. % CUSTOM LINE
+		\item [Erfüllungskriterium:] Sich an das Gesetz halten. % CUSTOM LINE
+	\end{lhp}
+\end{description}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:beispiel9.5}
+		\item [Name:] Konservative Nutzerdatenerfassung % CUSTOM LINE
+		\item [Beschreibung:] Es werden nur benötigte Nutzerdaten (diese, die in diesem Dokument erwähnt sind) erfasst, wobei diese lediglich von den Nutzern selbst bereitgestellt werden dürfen (z.B. beim erstellen eines Accounts übergibt ein Nutzer einen Usernamen). % CUSTOM LINE
+		\item [Motivation:] Wir brauchen die Daten nicht % CUSTOM LINE
+		\item [Erfüllungskriterium:] Nur benötigte Nutzerdaten erfassen.
 	\end{lhp}
 \end{description}
 
@@ -195,10 +204,10 @@
 
 \begin{description}[leftmargin=5em, style=sameline]	
 	\begin{lhp}{nf}{NF}{nfunk:beispiel10}
-		\item [Name:] Beispiel
-		\item [Beschreibung:] 
-		\item [Motivation:] 
-		\item [Erfüllungskriterium:] 
+		\item [Name:] Virenfrei % CUSTOM LINE
+		\item [Beschreibung:] Das Produkt wird ohne Viren oder sonstiger Malware verteilt. % CUSTOM LINE
+		\item [Motivation:] Es hat keinen Nutzen die User zu infizieren. % CUSTOM LINE
+		\item [Erfüllungskriterium:] Keine Viren oder Malware einbauen.
 	\end{lhp}
 \end{description}
 
@@ -224,7 +233,7 @@ Anforderungen, die sich auf die Prüfung/Audit vom System von SEP-Tutoren oder v
 		\item [Name:] Systemsprache
 		\item [Beschreibung:] Die Interfacesprache ist Deutsch.
 		\item [Motivation:] Synchronisation des Verständnisses von Teammitgliedern mit unterschiedlichen kulturellen Hintergründen.
-		\item [Erfüllungskriterium:] 
+		\item [Erfüllungskriterium:] Interface in Deutsch % CUSTOM LINE
 	\end{lhp}
 \end{description}
 

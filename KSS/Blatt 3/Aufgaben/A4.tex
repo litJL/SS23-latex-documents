@@ -1,0 +1,13 @@
+\section*{Aufgabe 4}
+\subsection*{a)}
+Wir betrachten Dominosteine als Multimengen $D$ mit zwei Einträgen (also gilt $|D| = 2 = n$). Die Menge der Möglichen Augenzahlen der Quadrate ist $A = \{1,2,3,4,5,6,7\}$ mit $|A|=7=m$. Die Anzahl der möglichen Multimengen (Anzahl verschiedener Dominosteine) ist berechenbar mithilfe der Formel aus Satz 1.11.6:
+\[
+  \binom{n+m-1}{m-1} = \binom{2+7-1}{7-1} = \binom{8}{6} = 28
+\]
+Es gibt also 28 verschiedene Dominosteine.
+\subsection*{b)}
+Die Augen der Würfel sind durch $A = \{1,2,3,4,5,6\}$ mit $|A|=6=m$ beschrieben und die Menge des Wurfs mit n Würfeln ist eine Multimenge $W$ mit $|W|=n$. Wir können nun wieder die Formel aus Satz 1.11.6 verwenden:
+\[
+  \binom{n+m-1}{m-1} = \binom{n+6-1}{6-1} = \binom{n+5}{5}
+\]
+Abhängig von der Anzahl der Würfel (n) gibt es somit $\binom{n+5}{5}$ mögliche Ergebnisse.

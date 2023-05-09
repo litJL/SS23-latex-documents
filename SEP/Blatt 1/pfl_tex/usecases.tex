@@ -18,17 +18,17 @@ Hinweis: Alle Systemfunktionen sind mit Anwendungsfällen zu decken! (Und dieser
 
 \begin{description}[leftmargin=5em, style=sameline]
 
-	\begin{lhp}{uc}{UC}{uc:beispiel}
-		\item [Name:] Name des Use Cases
-		\item [Ziel:] Ziel und Zweck des Use Cases.
-		\item [Akteure:] Akteure (auch benachbarte Systeme können Use Cases anfeuern), die den Use Case aktivieren können.
-		\item [Vorbedingungen:] Eigenschaften des Systemzustands, in dem die Aktivierung des Use Cases möglich ist.
-		\item [Eingabedaten:] Daten, die für die Ausführung des Use Cases nötig sind. Mit Referenzen auf~\ref{section:productdaten}.
-		\item [Beschreibung:] Eine allgemeine Beschreibung des Use Cases.
-		\item [Ausnahmen:] Verhalten des Systems in Ausnahmefällen (wenn etwas nicht ganz wie gedacht geht).
-		\item [Ergebnisse und Outputdaten:] Beschreibung des Systemzustands nach einer erfolgreichen Ausführung des Use Cases sowie die auszugebenden Daten.
-		\item [Systemfunktionen] Referenz auf die relevante(n) Systemfunktion(en).
-	\end{lhp}
+	% \begin{lhp}{uc}{UC}{uc:beispiel}
+	% 	\item [Name:] Name des Use Cases
+	% 	\item [Ziel:] Ziel und Zweck des Use Cases.
+	% 	\item [Akteure:] Akteure (auch benachbarte Systeme können Use Cases anfeuern), die den Use Case aktivieren können.
+	% 	\item [Vorbedingungen:] Eigenschaften des Systemzustands, in dem die Aktivierung des Use Cases möglich ist.
+	% 	\item [Eingabedaten:] Daten, die für die Ausführung des Use Cases nötig sind. Mit Referenzen auf~\ref{section:productdaten}.
+	% 	\item [Beschreibung:] Eine allgemeine Beschreibung des Use Cases.
+	% 	\item [Ausnahmen:] Verhalten des Systems in Ausnahmefällen (wenn etwas nicht ganz wie gedacht geht).
+	% 	\item [Ergebnisse und Outputdaten:] Beschreibung des Systemzustands nach einer erfolgreichen Ausführung des Use Cases sowie die auszugebenden Daten.
+	% 	\item [Systemfunktionen] Referenz auf die relevante(n) Systemfunktion(en).
+	% \end{lhp}
 
 	\begin{lhp}{uc}{UC}{uc:usermanagement}
 		\item [Name:] User Management
@@ -55,6 +55,20 @@ Hinweis: Alle Systemfunktionen sind mit Anwendungsfällen zu decken! (Und dieser
 					\end{itemize}
 		\item [Ergebnisse und Outputdaten:]
 		\item [Systemfunktionen] \ref{funk:bestenliste}
+	\end{lhp}
+
+	\begin{lhp}{uc}{UC}{uc:einstellungen}
+		\item [Name:] Einstellungen ändern
+		\item [Ziel:] Spieler können für ihren Client Einstellungen ändern
+		\item [Akteure:] Spieler, Kind
+		\item [Vorbedingungen:] Spieler befindet sich auf der Einstellungsseite
+		\item [Eingabedaten:] Einstellungsdaten
+		\item [Beschreibung:] Spieler kann vordefinierte Einstellungen verändern.
+		\item [Ausnahmen:] \begin{itemize}
+						\item[] \textit{Nicht eingeloggt:} Das System zeigt eine Fehlermeldung an und der Spieler wird auf die Hauptseite geleitet.
+					\end{itemize}
+		\item [Ergebnisse und Outputdaten:] Veränderte Einstellungen
+		\item [Systemfunktionen] \ref{funk:einstellung}
 	\end{lhp}
 
 	\begin{lhp}{uc}{UC}{uc:spielstarten}

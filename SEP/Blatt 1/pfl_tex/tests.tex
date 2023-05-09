@@ -11,12 +11,86 @@ Hier sollen verschiedene Szenarien beschrieben werden, mithilfe deren Sie späte
 	\item [Motivation:] Testet, ob die Anmeldung in das System korrekt funktioniert.
 	\item [Sczenarien:] \hfill
 		\begin{enumerate}
-			\item \textit{Zugriffsdaten sind vorhanden und richtig} \\ $\implies$ Spieler wird in die Lobby bewegt.
+			\item \textit{Zugriffsdaten sind vorhanden und richtig} \\ $\implies$ Spieler wird auf die Hauptseite bewegt.
 			\item \textit{Benutzername ist registriert, Passwort ist falsch} \\ $\implies$ Fehlermeldung wird angezeigt.
 			\item \textit{Benutzername ist nicht registriert} \\ $\implies$ Fehlermeldung wird angezeigt.
 		\end{enumerate}
 	\item [Relevante Systemfunktionen:] \ref{funk:zugriff}
-	\item [Relevante Use Cases:] \ref{uc:anmeld}
+	\item [Relevante Use Cases:] \ref{uc:usermanagement}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:abmelden}
+	\item [Name:] Spieler abmelden.
+	\item [Motivation:] Testet, ob die Abmeldung vom System korrekt funktioniert.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{User ist eingeloggt} \\ $\implies$ Spieler wird in die Lobby bewegt und ist nun ausgeloggt.
+			\item \textit{User ist ausgeloggt} \\ $\implies$ Fehlermeldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff}
+	\item [Relevante Use Cases:] \ref{uc:usermanagement}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:spielerstellen}
+	\item [Name:] Ein Spiel erstellen.
+	\item [Motivation:] Testet, ob ein Spiel erstellt werden kann.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{User ist eingeloggt} \\ $\implies$ Spieler wird in die Lobby des erstellten Spiels bewegt.
+			\item \textit{User ist ausgeloggt} \\ $\implies$ Fehlermeldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:spielstarten}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:spielbeitreten}
+	\item [Name:] Einem Spiel beitreten.
+	\item [Motivation:] Testet, ob einem Spiel beigetreten werden kann.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{User ist eingeloggt} \\ $\implies$ Spieler wird in die Lobby des Spiels bewegt.
+			\item \textit{User ist ausgeloggt} \\ $\implies$ Fehlermeldung wird angezeigt.
+			\item \textit{Spiel existiert nicht} \\ $\implies$ Fehlermeldung wird angezeigt.
+			\item \textit{Spiel läuft bereits} \\ $\implies$ Fehlermeldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:spielstarten}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:spielzüge}
+	\item [Name:] Testen der Spielzüge.
+	\item [Motivation:] Testet mögliche Spielzüge, die ein Spieler machen kann.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Legaler Spielzug wird gespielt} \\ $\implies$ Der Spielzug wird durchgeführt.
+			\item \textit{Illegaler Spielzug wird gespielt} \\ $\implies$ Fehlermeldung wird angezeigt und der Spielzug wird nicht durchgeführt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:spielstarten}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:chat}
+	\item [Name:] Chatfunktion.
+	\item [Motivation:] Testet die Chatfunktion.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Absenden einer Nachricht} \\ $\implies$ Nachricht wird gesendet und ist von den anderen clients empfangen.
+			\item \textit{Ausfall der Chatfunktion} \\ $\implies$ Fehlermeldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:spielstarten}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:einstellungen}
+	\item [Name:] Einstellungen.
+	\item [Motivation:] Testet die Einstellungen und ob diese übernommen werden.
+	\item [Sczenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Änderung einer Einstellung und drücken von übernehmen} \\ $\implies$ Von der Einstellung gewünschter Effekt ist sichtbar und / oder verifizierbar.
+			\item \textit{Änderung einer Einstellung und schließen des Einstellungsfensters} \\ $\implies$ Einstellungen sind nicht übernommen.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:einstellung}
+	\item [Relevante Use Cases:] \ref{uc:einstellungen}
 \end{lhp}
 
 \end{description}

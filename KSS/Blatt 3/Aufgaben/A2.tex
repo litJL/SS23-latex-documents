@@ -1,0 +1,18 @@
+\section*{Aufgabe 2}
+\subsection*{a)}
+Wir definieren unser Problem als ein Zahlpartitionsproblem: \\\\
+Wir nehmen die 12 (n) Tafeln Schokolade als unsere Zahl, die partitioniert werden soll und die 4 (m) Pakete als die Variablen. Somit erhalten wir:
+\[
+  12 = p_1 + p_2 + p_3 + p_4
+\]
+Da in jedem Paket mindestens eine Tafel Schokolade sein soll wenden wir die Formel aus Satz 1.10.13 an. Hiermit haben wir
+\[
+  \binom{n-1}{m-1} = \binom{12 - 1}{4 - 1} = \binom{11}{3} = 165
+\]
+Möglichkeiten die Tafeln Schokolade auf die Pakete aufzuteilen.
+
+\subsection*{b)}
+Dieses Problem ist ähnlich zu dem vorherigen. Unsere Zahl, welche partitioniert werden soll, ist nun 13 (n) und die Anzahl der Variablen bleibt bei 4 (m), da wir nur die Quersumme von Zahlen bis 9999 betrachten sollen. Jedoch gilt nun, dass $p_i = 0$ möglich ist (z.B. wegen der Quersumme von 3082 oder auch 382). Deshalb verwenden wir die Formel aus Satz 1.10.16:
+\[
+  \binom{n+m-1}{m-1} = \binom{13 + 4 - 1}{4 - 1} = \binom{16}{3} = 560
+\]
