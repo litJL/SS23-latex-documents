@@ -1,2 +1,33 @@
-\section*{Aufgabe \bn.3}
 \newpage
+\section*{Aufgabe \bn.3}
+\begin{align*}
+g_1\prec g_4\prec g_2\prec g_5\prec g_8\prec g_7\prec g_3\prec g_0\prec g_9\prec g_6
+\end{align*}
+\subsection*{$g_1 \prec g_4$:}
+/
+\subsection*{$g_4 \prec g_2$:}
+/
+\subsection*{$g_2 \prec g_5$:}
+\begin{align*}
+  \lim_{n \rightarrow \infty} \frac{ ln(ln(n)) }{ ln(n) } \overset{l'H}{=} \lim_{n \rightarrow \infty} \frac{ \frac{ 1 }{ n\cdot ln(n) }  }{ \frac{ 1 }{ n }  } = \lim_{n \rightarrow \infty} \frac{ \cancel{n} }{ \cancel{n}\cdot ln(n) } = 0  
+\end{align*}
+\subsection*{$g_5 \prec g_8$:}
+\begin{align*}
+  \lim_{n \rightarrow \infty} \frac{ \cancel{ln(n)} }{ ln(n)^{\cancel{2}} } = \lim_{n \rightarrow \infty} \frac{ 1 }{ ln(n) } = 0
+\end{align*}
+\subsection*{$g_8 \prec g_7$:}
+/
+\subsection*{$g_7 \prec g_3$:}
+\begin{align*}
+  \lim_{n \rightarrow \infty} \frac{ \cancel{\sqrt{n}} }{ \cancel{\sqrt{n}}\cdot ln(n)^2 } = \lim_{n \rightarrow \infty} \frac{ 1 }{ ln(n)^2 } = 0
+\end{align*}
+\subsection*{$g_3 \prec g_0$:}
+/
+\subsection*{$g_0 \prec g_9$:}
+\begin{align*}
+  \lim_{n \rightarrow \infty} \frac{ \frac{ n }{ ln(n) }  }{ n } = \lim_{n \rightarrow \infty} \frac{ \cancel{n} }{ \cancel{n}\cdot ln(n) } = \lim_{n \rightarrow \infty} \frac{ 1 }{ ln(n) } = 0
+\end{align*}
+\subsection*{$g_9 \prec g_6$:}
+\begin{align*}
+  \lim_{n \rightarrow \infty} \frac{ n }{ \left(\frac{ 3 }{ 2 }  \right)^{n} } \overset{l'H}{=} \lim_{n \rightarrow \infty} \frac{ 1 }{ n\left(\frac{ 3 }{ 2 }  \right)^{n-1} } = 0
+\end{align*}

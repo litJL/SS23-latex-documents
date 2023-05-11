@@ -1,2 +1,23 @@
-\section*{Aufgabe \bn.1}
 \newpage
+\section*{Aufgabe \bn.1}
+Der Algorithmus ist ähnlich zu Bubblesort, nur das hier per Schleifendurchlauf am Anfang sowie am Ende der Liste immer mind. ein weiteres Element sortiert wird. Der Grund dafür ist, dass die inneren for-Schleifen jeweils Bubblesort in entgegengesetzter Richtung anwenden. Also nehmen wir an: \\
+Wir haben eine Liste $A[1\dots n]$ mit sortierter repräsentation $A'[1\dots n]$.
+Nach dem j-ten Durchlauf der while-Schleife gilt
+\begin{align*}
+  A[k] = A'[k]\forall k\in\{1,\dots,j\} \land A[l] = A'[l]\forall l\in\{n-j+1,\dots,n\}
+\end{align*}
+\subsection*{Beweis der Invariante:}
+\subsubsection*{IA:}Aussage ist trivial erfüllt, da für $j = 0$ die Liste komplett unsortiert sein kann.
+\subsubsection*{IS: $j - 1 \rightarrow  j$} 
+Da die beiden inneren for-Schleifen komplett seperat voneinander sortieren müssen wir lediglich zwei Fälle betrachten:
+\paragraph*{Fall 1: unsortiert}
+Wenn $A[n-j+1]\not= A'[n-j+1]$ (analog $A[j]\not= A'[j]$ für die zweite for-Schleife) dann:
+
+Sobald i so ist, dass $A[i]=A'[n-j+1]$, dann vertauschen wir immer Nachbarn bis $i = n - j + 1$ (danach wird nicht mehr getauscht laut Invariante da der Rest bereits sortiert ist) womit dann $A[n-j+1] = A'[n-j+1]$ ist (also sortiert). Dies gilt analog für die zweite for-Schleife:
+
+Sobald i so ist, dass $A[i]=A'[j]$ (zu beachten ist, dass wir hier i dekrementieren), dann vertauschen wir immer Nachbarn bis $i = j$ (gleicher Grund wie oben) womit dann $A[j] = A'[j]$ ist.
+\paragraph*{Fall 2: bereits sortiert} 
+Wenn $A[n-j+1] = A'[n-j+1]$, dann vertauschen wir nichts da ab $i = n - j + 1$ keine Tauschungen mehr stattfinden (gilt laut Invariante). Das ganze nochmal für die zweite for-Schleife:
+
+Wenn $A[j] = A'[j]$, dann vertauschen wir nichts da ab $i = j$ keine Tauschungen mehr stattfinden (nochmals laut Invariante). \\\\
+Somit ist bewiesen, dass die Invariante nach jedem Schleifendurchlauf gilt. Da dies der Fall ist muss auch gelten, dass die Liste nach Ausführung des Algorithmus sortiert ist.

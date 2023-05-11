@@ -1,2 +1,36 @@
-\section*{Aufgabe \bn.2}
 \newpage
+\section*{Aufgabe \bn.2}
+\subsection*{a)}
+$n ^{ \alpha }\in o(n ^{ \alpha + \epsilon } )$ laut Grenzwertlemma
+\begin{align*}
+  \lim_{n \rightarrow \infty} \frac{ n ^{ \alpha } }{ n ^{ \alpha + \epsilon }  } =
+  \lim_{n \rightarrow \infty} \frac{ 1 }{ n ^{ \epsilon }  }  = 0
+\end{align*}
+Da $\epsilon \ge 1$ ist, muss $\lim_{n \rightarrow \infty} \frac{ 1 }{ n ^{ \epsilon }  }  = 0$.
+\subsection*{b)}
+$c < d$ und $c^n\in o(d^n)$ laut Grenzwertlemma
+\begin{align*}
+  \lim_{n \rightarrow \infty} \frac{ c^n }{ d^n } = \lim_{n \rightarrow \infty} \left( \frac{ c }{ d }  \right)^n = 0
+\end{align*}
+Da $c<d$ ist muss $\frac{ c }{ d } < 1$ sein, weshalb $ \left( \frac{ c }{ d }  \right)^n $ gegen 0 konvergiert.
+\subsection*{c)}
+$P(b) \in \Theta(n^k)$ laut Grenzwertlemma
+\begin{align*}
+  &\lim_{n \rightarrow \infty} \frac{ a_0 + a_1n + \ldots + a_kn^k }{ n^k } = \lim_{n \rightarrow \infty} \frac{ a_0 }{ n^k } + \frac{ a_1n }{ n^k } + \ldots + \frac{ a_kn^k }{ n^k } = \\
+  &\lim_{n \rightarrow \infty} \frac{ a_0 }{ n^k } + \frac{ a_1 }{ n^{k-1} } + \ldots + \frac{ a_k }{ 1 } = 0 + 0 + \ldots + a_k = a_k
+\end{align*}
+Da $a_k$ eine konstante Zahl ist, mit $a_k > 0$, ist $P(n)\in\Theta(n^k)$
+\subsection*{d)}
+/
+\subsection*{e)}
+$n^\alpha \in o(c^n)$ no clue\\\\
+$n^\alpha \in \omega(c^-n)$ laut Grenzwertlemma
+\begin{align*}
+  \lim_{n \rightarrow \infty} \frac{ n^\alpha }{ c^{-n} } = \lim_{n \rightarrow \infty} n^\alpha \cdot c^n = \infty
+\end{align*}
+Für $\alpha,c > 1$ ist es klar\\
+Falls $\alpha = 1$, so ist $\lim_{n \rightarrow \infty} n =\infty$ \\
+Falls $c = 1$, dann gilt $ \lim_{n \rightarrow \infty} n^\alpha \cdot 1 $ wobei wir wissen, dass der andere Term auf jeden Fall bereits gegen $\infty$ geht.
+
+
+
