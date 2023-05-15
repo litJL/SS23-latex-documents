@@ -1,1 +1,48 @@
+\pagebreak
 \section*{Aufgabe 2}
+Angenommen wir haben folgende Relationen:
+\begin{align*}
+  &R(A_1,\dots,A_m,B_1,\dots,B_k), \\
+  &S(B_1,\dots,B_k,C_1,\dots,C_n), \\
+  &H(C_1,\dots,C_n,D_1,\dots,D_p)
+\end{align*}
+Wir verwenden die Definition des natürlichen Verbunds aus der Vorlesung:
+\begin{align*}
+  R \Join S(A_1,\dots,A_m,{\color{darkgreen} B_1,\dots,B_k},C_1,\dots,C_n)
+\end{align*}
+\subsection*{Assoziativität:}
+\subsubsection*{Für $R \Join (S \Join H)$: }
+\begin{align*}
+  S\Join H(B_1,\dots,B_k,C_1,\dots,C_n,D_1,\dots,D_p)
+\end{align*}
+Da in $S\Join H$ immernoch $B_1,\dots,B_k$ enthalten ist, gilt laut Definition:
+\begin{align*}
+  R \Join (S \Join H)(A_1,\dots,A_m,B_1,\dots,B_k,C_1,\dots,C_n,D_1,\dots,D_p)
+\end{align*}
+\subsubsection*{Für $(R \Join S) \Join H$: }
+\begin{align*}
+  R\Join S(A_1,\dots,A_m,B_1,\dots,B_k,C_1,\dots,C_n)
+\end{align*}
+Da in $R\Join S$ immernoch $C_1,\dots,C_n$ enthalten ist, gilt laut Definition:
+\begin{align*}
+  (R \Join S) \Join H(A_1,\dots,A_m,B_1,\dots,B_k,C_1,\dots,C_n,D_1,\dots,D_p)
+\end{align*}
+Hiermit ist klar zu sehen, dass:
+\begin{align*}
+  R \Join (S \Join H) = (R \Join S) \Join H
+\end{align*}
+\subsection*{Kommutativität:}
+\subsubsection*{Für $R\Join S$:}
+\begin{align*}
+  R\Join S(A_1,\dots,A_m,B_1,\dots,B_k,C_1,\dots,C_n)
+\end{align*}
+\subsubsection*{Für $S\Join R$:}
+Da die Reihenfolge der Attribute keine Rolle spielt, gilt:
+\begin{align*}
+  S\Join R(A_1,\dots,A_m,B_1,\dots,B_k,C_1,\dots,C_n)
+\end{align*}
+Also muss gelten:
+\begin{align*}
+  R\Join S = S\Join R
+\end{align*}
+

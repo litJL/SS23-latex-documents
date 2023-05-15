@@ -1,1 +1,16 @@
 \section*{Aufgabe 1}
+\subsection*{a)}
+\paragraph*{Wohnung:} Primärschlüssel(Straße, Nr)
+\paragraph*{Reisegruppe:} Primärschlüssel(GNR)
+\paragraph*{wohnt\_in:} Primärschlüssel(GNR), Fremdschlüssel(Straße, Nr)
+\subsection*{b)}
+Wohnung = W; Reisegruppe = R; wohnt\_in = wi
+\subsubsection*{i)}
+\begin{align*}
+  \pi _{ R.\text{Name} } (\sigma _{ wi.\text{Straße} = \text{'Hauptstr'} } (R\Join wi))
+\end{align*}
+\subsubsection*{ii)}
+\begin{align*}
+  &N = \gamma _{ \text{ Straße, Nr, c} \leftarrow COUNT(\text{ Strasse, Nr}) } (wi) \\
+  &\pi _{ W.\text{Strassen}, W.\text{Nr}, N.\text{c}} (W {\tiny \textifsym{d|><|d}} N)
+\end{align*}

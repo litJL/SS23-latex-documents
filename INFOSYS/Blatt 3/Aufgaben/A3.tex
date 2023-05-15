@@ -1,1 +1,14 @@
+\pagebreak
 \section*{Aufgabe 3}
+\subsection*{a)}
+Angenommen in R sind Duplikate. Bei dem Ausdruck
+\begin{align*}
+  \gamma _{ R.y,c\leftarrow COUNT(R.z) } (R) 
+\end{align*}
+werden die Duplikate nicht mitgezählt bei der Verwendung einer Menge. Bei der Verwendung einer Multi-Menge werden die Duplikate jedoch mitgezählt. Somit erhält man verschiedene Ergebnisse. \\\\
+Damit die Ergebnisse gleich sind dürfen keine Duplikate vorliegen.
+\subsection*{b)}
+\begin{align*}
+  \pi _{ A.id } (A) - \pi _{ R.actor\_id } (\sigma _{ MG.genre = 'Horror' } (R\Join MG))
+\end{align*}
+Es gibt keine äquivalente Anfrage, da es für Schauspieler möglich ist an einem späteren Zeitpunkt in einem Horrorfilm mitzuspielen. Hierdurch wäre die Anfrage nicht monoton.

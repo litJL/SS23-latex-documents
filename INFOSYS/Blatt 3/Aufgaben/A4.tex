@@ -1,1 +1,28 @@
+\pagebreak
 \section*{Aufgabe 4}
+\subsection*{a)}
+\subsubsection*{i)}
+\begin{align*}
+  ans(x_n) \leftarrow \text{Mitarbeiter}(\_,x_n,\text{'Englisch'})
+\end{align*}
+\subsubsection*{ii)}
+\begin{align*}
+  ans(x_a) \leftarrow &\text{Autos}(\text{'Käfer'},\_,x_b,x_a,\_,\_), \\
+                      &\text{Baureihen}(\text{'Käfer'},\_,x_b,2)
+\end{align*}
+\subsection*{b)}
+\subsubsection*{i)}
+Die Namen aller Autohäuser in Trier und der Zustand alle M5er BMWs der dritten Baureihe die diese anhand haben.
+\begin{align*}
+  ans(x_{na},x _{ zu } ) \leftarrow &\text{Autohaus}(x _{ na } ,\_,\text{'Trier'}) \\
+                                    &\text{Autos}(\text{'M5'},\_,x _{ ui } ,x _{ na } ,\_,x _{ zu } ) \\
+                                    &\text{Baureihen}(\text{'M5'},\text{'BMW'},x _{ ui } ,3)
+\end{align*}
+\subsubsection*{ii)}
+Ort und Name aller Autohäuser mit Englischsprechenden Mitarbeitern und die der Marke eines 500SL der Baureihe 4 angehören.
+\begin{align*}
+  ans(x_{or},x _{ ah } ) \leftarrow &\text{Mitarbeiter}(x _{ ah } ,\_,\text{'Englisch'}), \\
+                                    &\text{Autohaus}(x _{ ah } , x _{ ma } , x _{ or } ), \\
+                                    &\text{Baureihen}(\text{'500SL'}, x _{ ma } , \_, 4)
+\end{align*}
+
