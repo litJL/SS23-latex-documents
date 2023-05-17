@@ -1,0 +1,44 @@
+\section*{Aufgabe 2}
+\subsection*{a)}
+\#Tafeln Schokolade = 12 \\
+\#Pakete = 4 \\
+Betrachte Anzahl aller ungeordneten Zahlenpartitionen \\
+Gesucht: $ P(12,4) $\\
+Anwenden der folgenden Formel (Satz 1.10.8):
+\begin{align*}
+  P(n,m) = P(n-m,m) + P(n-1,m-1)
+\end{align*}
+Beachte: $ P(n,n) = 1 $, $ P(n,1) = 1 $ und $ P(n,m) = 0\ \text{mit } n<m $.
+Also genau so wie wirs schon gemacht haben (Antwort ist lang, schreibe es nicht nochmal hin). \\
+$P(5,3) = |\{1,1,3\} \cup \{1,2,2\}|$
+\pagebreak
+\subsection*{b)}
+!Nichtmehr ungeordnet!\\
+z.B. $ 47 \rightarrow 0047 $ \\
+Beachte Ziffern von 0-9 $\rightarrow$ 1-10 \\
+Suchen somit Ziffern mit Quersumme 17 \\
+Verwende Formel aus Satz 1.10.13 \\
+\begin{align*}
+  \binom{16}{3} = 560
+\end{align*}
+Es ist aber noch nicht sichergestellt, dass nur Ziffern von 1-10 verwendet werden.
+Es kann nur eine Ziffer größer als 10 werden. \\
+Für Ziffer 14 die Anzahl der Möglichkeiten:
+\begin{align*}
+  4\cdot \binom{2}{2} = 4
+\end{align*}
+Für Ziffer 13:
+\begin{align*}
+  4\cdot \binom{3}{2} = 12
+\end{align*}
+Für Ziffer 12:
+\begin{align*}
+  4\cdot \binom{4}{2} = 24
+\end{align*}
+Für Ziffer 11:
+\begin{align*}
+  4\cdot \binom{5}{2} = 40
+\end{align*}
+Der Binomialkoeffizient verwendet ebenfalls die Formel von oben (Restliche Ziffern die nicht z.B. 14 sind aufteilen, bei 14 gibt es nur einsen.)
+Also 80 Illegale Möglichkeiten, somit ist die Letztendliche Anzahl $ 560 - 80 = 480 $.
+

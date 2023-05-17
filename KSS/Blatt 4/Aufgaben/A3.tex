@@ -1,1 +1,25 @@
+\pagebreak
 \section*{Aufgabe 3}
+Für diese Ungleichung sind zwei Fälle zu betrachten:\\\\
+\emph{$ M_1$ bis $M_n$ sind disjunkt:}\\
+Da $ M_1 $ bis $ M_n $ disjunkt sind, gilt für den Wahrheitswert der Vereinigung:
+\begin{align*}
+  P(M_1\cup\ldots\cup M_n) = \sum_{k=1}^{n}P(M_k)
+\end{align*}
+Also:
+\begin{align*}
+  \sum_{k=1}^{n}P(M_k) \le \sum_{k=1}^{n}P(M_k)
+\end{align*}
+Was klar wahr ist.\\\\
+\emph{$ M_1$ bis $M_n$ sind nicht disjunkt:}\\
+Angenommen $ \lambda\in M_i,M_j $ mit $ i \not= j $\\
+Der Wahrheitswert der Vereinigung
+\begin{align*}
+P(M_1\cup\dots\cup M_i\cup\dots\cup M_j\cup\dots\cup M_n)
+\end{align*}
+enthält den Wahrheitswert $ m(\lambda) $ lediglich 1 mal (da es eine Menge ist).\\
+Die Rechte Seite der Bonferroni-Ungleichung
+\begin{align*}
+  \sum_{k=1}^{n}P(M_k)
+\end{align*}
+enthält diesen Wert jedoch 2 mal, da $ m(\lambda) $ jeweils in der Berechnung von $ P(M_i) $ sowie $ P(M_j) $ enthalten ist. Somit muss die Rechte Seite der Bonferroni-Ungleichung größer als die Linke Seite sein (Ungleichung hält somit). Falls $ m(\lambda)=0 $, so hat das überschneidende Element $ \lambda $ keinen Einfluss auf beide Seiten und es hat ein \emph{Verhalten}, was ähnlich zu dem Fall, dass $ M_1 $ bis $ M_n $ disjunkt sind, ist.

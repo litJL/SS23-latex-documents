@@ -1,0 +1,17 @@
+\section*{Aufgabe 1}
+\subsection*{a)}
+PK: \\
+Wohnung(Straße, Nr) \\
+Reisegruppe(GNR) \\
+wohnt\_in(GNR,Straße,Nr) \\
+FK: \\
+wohnt\_in(GNR,Straße,Nr)
+\subsection*{b)}
+\subsubsection*{i)}
+Unsers ist richtig
+\subsubsection*{ii)}
+\begin{align*}
+&N = \gamma _{ \text{Straße, Nr, c} \leftarrow COUNT(\text{GNR}) }(wi) \\
+&\pi _{ \text{W.Straße, W.Nr, N.c} } (W \Join N)  
+\end{align*}
+Full outer join verwendet, kann hier auch left outer join sein

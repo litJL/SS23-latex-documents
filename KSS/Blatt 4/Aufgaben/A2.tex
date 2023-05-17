@@ -1,1 +1,34 @@
+\pagebreak
 \section*{Aufgabe 2}
+\subsection*{a)}
+Es ist zu zeigen, dass:
+\begin{align*}
+  \sum_{j=0}^{\infty}(1-r)^j\cdot r = 1
+\end{align*}
+Wir können umstellen:
+\begin{align*}
+r\cdot \sum_{j=0}^{\infty}(1-r)^j
+\end{align*}
+Da $0<r<1$ ist gilt $ 1-r < 1 $ weswegen wir folgende Formel für Reihen anwenden können:
+\begin{align}
+  \sum_{i=1}^{\infty}\frac{ c }{ 1-c } \text{ wenn }|c| < 1
+\end{align}
+Davor muss jedoch $ j=1 $ gelten:
+\begin{align*}
+  r\cdot ((1-r)^0 + \sum_{j=1}^{\infty}(1-r)^j) = r\cdot (1+ \sum_{j=1}^{\infty}(1-r)^j) 
+\end{align*}
+Mit (1) erhalten wir dann:
+\begin{align*}
+  r\cdot (1 + \frac{ 1-r }{ \cancel{1}-(\cancel{1}-r) } ) = r + \frac{ \cancel{r}\cdot(1-r) }{ \cancel{r} } = r+1-r = 1
+\end{align*}
+Also ist die Summe aller möglichen Wahrheitswerte von $ m_1 $ gleich 1. $ m_1 $ ist somit eine Wahrscheinlichkeitsfunktion.
+\subsection*{b)}
+Es ist zu zeigen, dass:
+\begin{align*}
+  \sum_{j=0}^{n}\binom{n}{j}p^j(1-p)^{n-j} = 1
+\end{align*}
+Wir definieren $ p=p $ und $ q=(1-p) $. Mithilfe des Hinweises erhalten wir:
+\begin{align*}
+  \sum_{j=0}^{n}\binom{n}{j}p^j(1-p)^{n-j} = (p+(1-p))^n = 1^n = 1
+\end{align*}
+Somit ist die Summer aller möglichen Wahrheitswerte von $ m_2 $ gleich 1. $ m_2 $ ist somit auch eine Wahrscheinlichkeitsfunktion.

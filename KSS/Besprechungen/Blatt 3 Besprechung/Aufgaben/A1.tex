@@ -1,0 +1,13 @@
+\section*{Aufgabe 1}
+\subsection*{b)}
+$ B_0 = \sum_{m=0}^{0}S(0,m) = S(0,0) = 1 $ \\
+Nach Satz 1.9.10: $$ S(n+1,m+1) = \sum_{k=0}^{n}\binom{n}{k} S(k,m) $$
+Dann gilt
+\begin{align*}
+  B_{n+1} = \sum_{m=0}^{n+1}S(n+1,m) = S(n+1,0) + \sum_{m = 1}^{n+1}S(n+1,m) = \sum_{m = 0}^{n}S(n+1,m+1)
+\end{align*}
+Laut Satz 1.9.10:
+\begin{align*}
+  \sum_{m = 0}^{n}\sum_{k = 0}^{n}\binom{n}{k}S(k,m) = \sum_{k = 0}^{n}\binom{n}{k}\sum_{m = 0}^{n}S(k,m) = \sum_{k = 0}^{n}\binom{n}{k}B_k
+\end{align*}
+

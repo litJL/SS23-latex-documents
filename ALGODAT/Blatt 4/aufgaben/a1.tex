@@ -1,2 +1,11 @@
 \newpage
 \section*{Aufgabe \bn.1}
+\subsection*{b)}
+Eine Rekurrenzgleichung kann aus dem Code abgelesen werden:
+\begin{align*}
+  T(n) \le T(\frac{ n }{ \nicefrac{ 3 }{ 2 } } ) + T(\frac{ n }{ \nicefrac{ 3 }{ 2 } } ) + T(\frac{ n }{ \nicefrac{ 3 }{ 2 } } ) + Dn \le 3\cdot T(\frac{ n }{ \nicefrac{ 3 }{ 2 } } )+ Dn
+\end{align*}
+Anwenden des Master Theorems: $\quad a=3;\quad b=\nicefrac{3}{2}; \quad s=1 $
+\begin{align*}
+  3>\nicefrac{3}{2} \quad\overset{\text{Fall 1}}{\rightarrow }\quad T(n)\in O(n ^{ \log_{\nicefrac{3}{2}}3 } )
+\end{align*}

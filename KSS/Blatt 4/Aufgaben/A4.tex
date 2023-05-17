@@ -1,1 +1,39 @@
+\pagebreak
 \section*{Aufgabe 4}
+\subsection*{a)}
+Zu Berechnen:
+\begin{align*}
+  P(A\cup B\cup C) = P(A)+P(B)+P(C)-P(A\cap B)-P(A\cap C)-&P(B\cap C)+\\
+  &P(A\cap B\cap C)
+\end{align*}
+\emph{Triviale und bereits gegebene Annahmen:}\\
+$$P(A) = \nicefrac{1}{4},P(B) = 1-P(\overline{B}) = \nicefrac{1}{3},P(C)=\nicefrac{1}{2},P(A\cap C)=0$$
+\emph{Restliche benötigte Annahmen:}\\
+\begin{align*}
+  &P(A\cap B) = P(B) - P(\overline{A}\cap B) = \nicefrac{1}{3} - \nicefrac{1}{4} = \nicefrac{1}{12}\\
+  &P(B\cap C) = 1 - P(\overline{B\cap C})\overset{\text{de morgan}}{=} 1 - P(\overline{B}\cup\overline{C}) = 1 - \nicefrac{5}{6} = \nicefrac{1}{6}\\
+  &P(A\cap B\cap C) = 0
+\end{align*}
+Weil $ P(A\cap C) $ bereits 0 ist muss $ P(A\cap B\cap C) $ auch 0 sein, da selbst beim Schnitt mit B keine relevanten Wahrheitswerte mehr auftauchen können. \\
+Die Werte können nun eingesetzt werden:
+\begin{align*}
+  P(A\cup B\cup C) = \nicefrac{1}{4} + \nicefrac{1}{3} + \nicefrac{1}{2} - \nicefrac{1}{12} - 0 - \nicefrac{1}{6} + 0 = \nicefrac{5}{6}
+\end{align*}
+\subsection*{b)}
+Um die Wahrscheinlichkeit, dass eines der Ereignisse eintritt, zu modellieren, nehmen wir die Vereinigung aller Ereignisse $ A_i $:
+\begin{align*}
+P(A_1\cup\dots\cup A_n)
+\end{align*}
+Nach der Bonferroni-Ungleichung gilt dann:
+\begin{align*}
+  P(A_1\cup\dots\cup A_n) \le \sum_{k=1}^{n}P(A_k)
+\end{align*}
+Da für alle $ A_i $ gilt $ m(A_i)=0.05 $ ist
+\begin{align*}
+  \sum_{k=1}^{n}P(A_k) = \underbrace{0.05 + 0.05 + \ldots + 0.05}_{\text{n-mal}} = n\cdot 0.05
+\end{align*}
+somit gilt
+\begin{align*}
+  P(A_1\cup\dots\cup A_n) \le n\cdot 0.05
+\end{align*}
+Also ist die Wahrscheinlichkeit, dass eines der Ereignisse eintritt, höchstens $ n\cdot 0.05 $.

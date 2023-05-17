@@ -1,1 +1,54 @@
 \section*{Aufgabe 1}
+\subsection*{a)}
+Es gibt drei mögliche Spielstände bei welchen der Schwächere Spieler gewinnt: \\
+3-0, 3-1 und 3-2. Die letztendliche Wahrscheinlichkeit berechnet sich aus den Wahrscheinlichkeiten dieser Punktestände. Die Wahrscheinlichkeit für 3-0 ist trivial: \\
+\begin{align*}
+  0.4^3 \approx 0.064
+\end{align*}
+Da der schwächere Spieler jeden Satz gewinnt müssen wir nur dessen Gewinnwahrscheinlichkeit pro Satz betrachten. Bei den Folgenden Spielständen müssen wir jedoch beachten, dass die Satzpunkte in verschiedenen Reihenfolgen geschehen können. Wir beschreiben einen gewonnenen Satz für den schwächeren Spieler mit 'W' und für den stärkeren Spieler mit 'S'. Z.B. kann der Spielstand 3-1 durch die Folge 'SWWW' und 'WSWW' erreicht werden. Die Folgen beschreiben verschiedene Pfade in einem Entscheidungsbaum, führen jedoch zu dem gleichen Spielstand.\\\\
+Wahrscheinlichkeit für 3-1: \\
+Wir geben nun den Buchstaben Werte: 'W' = 1 und 'S' = 0. Hiermit beschreiben wir:
+\begin{align*}
+  3 = x_1 + x_2 + x_3 + x_4
+\end{align*}
+3 beschreibt die Anzahl der Sätze, die der schwächere Spieler gewinnen muss. Da der letzte Satz immer von ihm gewonnen werden muss (also $ x_4 = 1 $) können wir schreiben:
+\begin{align*}
+  2 = x_1 + x_2 + x_3.
+\end{align*}
+Wenn wir nun die Formel aus Satz 1.10.16 anwenden erhalten wir fast die Anzahl der möglichen Kombinationen von Satzgewinnen, die in einem Spielgewinn von dem schwächeren Spieler resultieren:
+\begin{align*}
+  \binom{4}{2} = 6.
+\end{align*}
+Jetzt müssen wir lediglich die illegalen Kombinationen abziehen, bei denen $ x_i = 2 $ ist. Dies ist trivial zu berechnen, da wenn eine Variable 2 ist die anderen Variablen 0 sein müssen. Somit gibt es hier 3 illegale Kombinationen, also:
+\begin{align*}
+  \binom{4}{2} - 3 = 3
+\end{align*}
+Es gibt also 3 Wege einen Punktestand von 3-1 zu erhalten, wir müssen also die Wahrscheinlichkeit all dieser Wege beachten. Pro Weg ist die Wahrscheinlichkeit:
+\begin{align*}
+0.4^3 \cdot 0.6^1 \approx 0.0384
+\end{align*}
+Also insgesamt $ 3 \cdot 0.0384 = 0.1152$.\\\\
+Wahrscheinlichkeit für 3-2:\\
+Berechnung ist ähnlich zu 3-1. Da hier 5 Sätze gespielt werden hat unsere Zahlenpartition eine Variable mehr. Die Anzahl der illegalen Kombinationen erhöht sich auf 4. Somit ist
+\begin{align*}
+  \binom{5}{3} - 4 = 6
+\end{align*}
+die Anzahl der Wege den Punktestand 3-2 zu erhalten. Die Wahrscheinlichkeit pro Weg:
+\begin{align*}
+  0.4^3 \cdot 0.6^2 = 0.02304
+\end{align*}
+also insgesamt $ 6\cdot 0.02304 = 0.13824 $.\\\\
+Somit ist die Gesamte Wahrscheinlichkeit, dass der schwächere Spieler gewinnt
+\begin{align*}
+  0.064 + 0.1152 + 0.13824 =  0.31744
+\end{align*}
+\subsection*{b)}
+Wir teilen die Siegprämie nach der Wahrscheinlichkeit, das Spiel von dem Punktestand 2-1 aus zu gewinnen, auf. Team 1 ist in führung. Aufgrund des Punktestands gibt es keine verschiedenen Wege auf gleiche Punktestände zu kommen: 
+\pagebreak
+\\ Fall 3-1:\\
+Team 1 macht mit dem nächsten Satz aus. Da Team 1 eine Gewinnwahrscheinlichkeit von 0.5 hat ist die Wahrscheinlichkeit für diesen Punktestand ebenfalls 0.5 \\\\
+Fall 3-2:\\
+Team 2 gewinnt einen Satz und darauf gewinnt Team 1 einen Satz. Team 1 gewinnt wieder, jedoch ist die Chance für diesen Punktestand nurnoch $ 0.5\cdot 0.5 = 0.25 $ da die Chance, das Team 2 einen Satz gewinnt, mitverechnet werden muss.\\\\
+Fall 2-3:\\
+Team 2 gewinnt zwei Sätze und somit auch das Spiel. Die Wahrscheinlichkeit für diesen Punktestand ist ebenfalls 0.25 analog zu Fall 3-2.\\\\
+Da Team 1 in Fall 3-1 und 3-2 gewinnt hat Team 1 eine Chance von 0.75 das komplette Spiel zu gewinnen. Team 2 gewinnt nur mit einer Chance von 0.25. Daher sollte Team 1 75\% des Preisgelds und Team 2 25\% des Preisgelds erhalten.
