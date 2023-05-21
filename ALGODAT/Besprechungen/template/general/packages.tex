@@ -1,0 +1,166 @@
+% !TEX root = ../main.tex
+% !TEX spellcheck = en_GB
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Standard Packages
+% -----------------------------------------------------------------------
+\usepackage[ngerman]{babel}
+\usepackage{geometry} % alternatively type-area
+\usepackage{fancyhdr}
+
+
+% Font and Encoding Packages
+% -----------------------------------------------------------------------
+\usepackage[T1]{fontenc}    % enables symbols as ä, ö, ü, ß
+\usepackage[utf8]{inputenc} % uft8-encoded symbols can processed
+\usepackage{amsfonts}       % fonts mainly used in a mathematical context
+\usepackage[lighttt]{lmodern}
+%\usepackage[scaled=0.85]{DejaVuSansMono}
+
+% Symbols
+% -----------------------------------------------------------------------
+% Specialized symbols
+\usepackage{amssymb}	 % collection of mathematical symbols
+\usepackage{extarrows}	 % collection of various arrows
+
+
+% Maths Packages
+% -----------------------------------------------------------------------
+% These packages provide environments and commands for mathematical purposes
+\usepackage{mathtools} % huge collection for mathematical writing replaces/extends amsmath
+\usepackage{amsthm}    % provides claim-environments like theorem, lemma
+\usepackage{cases}     % provides environment 'cases' for case distinctions
+\usepackage{nicefrac}  % provides cmd 'nicefrac' to write '1/2' in texts
+
+
+% Table and Picture Packages
+% -----------------------------------------------------------------------
+\usepackage{array}      % provides cmd to program talbes, e.g. with of a column
+\usepackage{enumitem}   % user control over the basic list environments itemize, enumerate, and description
+\usepackage{graphicx}   % provides optional arguments for 'includegraphics' like scaling
+\usepackage{caption}    % enables description/captions for images, tables, algorithms
+\usepackage{float}      % provides the 'H' option for floating objects like figures
+\usepackage{pdfpages}   % enables the inclusion of PDFs in a latex document
+
+
+% Computer Science Packages
+% -----------------------------------------------------------------------
+\usepackage[small]{complexity} % tool set for complexity theory
+\usepackage{listings}          % integrate program source code into the pdf
+\usepackage{algorithm}         % provides basic environment for algorithm display
+\usepackage{algpseudocode}     % provides commands to write pseudocode
+\usepackage{fancyvrb}
+
+
+% Citation, Reference, Colours
+% -----------------------------------------------------------------------
+\usepackage{hyperref} % provides clickable in-document-references
+\usepackage{xcolor}   % everything related to colours
+
+
+% Notes
+% -----------------------------------------------------------------------
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{lineno}     % to add line numbers for correction purposes
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONFIGURATION for ALGORITHMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lstset{
+    mathescape   = true,
+	language     = c++,
+	basicstyle   = \footnotesize\ttfamily,
+	morekeywords = {Eingabe, Ausgabe},
+	tabsize      = 4,
+    numbers      = left,
+    stepnumber   = 1,
+    xleftmargin  = 4.5ex
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ToDo NOTES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\todoinline}[1]{\todo[inline, caption = {}]{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ENVIRONMENT - THEOREM
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Theorem with numbers
+\theoremstyle{definition}
+\newtheorem{theorem}             {Theorem}
+\newtheorem{lemma}      [theorem]{Lemma}
+\newtheorem{corollary}  [theorem]{Korollar}
+\newtheorem{claim}      [theorem]{Behauptung}
+
+\theoremstyle{definition}
+\newtheorem{definition} [theorem]{Definition}
+\newtheorem{problem}	[theorem]{Problem}
+\newtheorem{example}    [theorem]{Beispiel}
+\newtheorem{remark}     [theorem]{Anmerkung}
+\newtheorem{observation}[theorem]{Beobachtung}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SIMPLE MACROS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Mathematical Sets
+\newcommand{\Rel}{\ensuremath{\mathbb{R}}}
+\newcommand{\Rat}{\ensuremath{\mathbb{Q}}}
+\newcommand{\Int}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Nat}{\ensuremath{\mathbb{N}}}
+\newcommand{\Bool}{\ensuremath{\mathbb{B}}}
+
+% Mathematics macros
+\newcommand{\eqText}[1]{\ensuremath{\mathrel{\overset{\text{\sffamily\scriptsize #1}}{=}}}}
+
+% Computer Science Marcos
+\newcommand{\calO}[1]{\ensuremath{\mathcal{O}(#1)}}
+\newcommand{\reducesMOto}[1]{\leqslant^{#1}_{\lang{mo}}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ENUMERATE ENVIRONMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The environments redefined here provide a alternative to the common enumeration (enumerate) without adjusting the label by hand each time 
+
+
+% roman enumerate environment -- (i)
+\newenvironment{enumrom}{
+	\begin{enumerate}[labelindent=\parindent, leftmargin=*, label=(\roman*), align=left]
+	}{
+	\end{enumerate}
+	}
+
+% numbered enumerate environment -- (1)
+\newenvironment{enumnum}{
+	\begin{enumerate}[leftmargin=*, label=(\arabic*), align=left]
+	}{
+	\end{enumerate}
+	}
+
+% case enumerate environment -- 1. case:
+\newenvironment{enumcase}{
+	\begin{enumerate}[labelindent=.5em, leftmargin=*, label=Case~\arabic*:, align=left]
+	}{
+	\end{enumerate}
+	}
+
+% case enumerate environment -- 1. case:
+\newenvironment{parts}{
+	\begin{enumerate}[labelindent=.5em, leftmargin=*, label=\alph*), align=left]
+	}{
+	\end{enumerate}
+	}
+

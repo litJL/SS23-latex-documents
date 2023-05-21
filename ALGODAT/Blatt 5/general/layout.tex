@@ -1,0 +1,53 @@
+% !TEX root = ../main.tex
+% !TEX spellcheck = en_GB
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LAYOUT SETTING - using fancyhdr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\submissiontitle}[1]{
+	\pagestyle{fancy}
+	\setlength{\headheight}{14.5pt}
+	\fancyhead[R]{\thepage}
+	\fancyhead[L]{#1}
+	\fancyfoot{}
+	\title{#1}
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REDUCING the white part
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newgeometry{headheight=15.5pt, marginparwidth=2cm}
+%\linenumbers
+
+% allow page-breaks in mathematics mode but avoid them
+\allowdisplaybreaks[1]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hyperlinks Setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{
+	colorlinks = true,		% instead of frames around the links, colour links
+	linkcolor  = darkblue,  % colour internal links
+	citecolor  = darkred,	% colour of citations
+	urlcolor   = darkgreen	% colour of external links
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colours
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+\definecolor{darkred}{RGB}{185,40,25}
+\definecolor{darkblue}{RGB}{0,95,140}
+\definecolor{darkyellow}{RGB}{155,135,12}
+
+

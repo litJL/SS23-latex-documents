@@ -1,0 +1,25 @@
+\pagebreak
+\section*{Aufgabe \bn.1}
+Der code sieht wie Python aus, wir nehmen aber an, dass hier Arrayinidizierung mit 1 beginnt.
+\begin{Verbatim}[frame=single, label=Arrayanfang sortieren]
+  def beginSort(A,k):
+    n = len(A)
+
+    quickSelect(A,1,n,k)
+    
+    quickSort(A,1,k-1)
+\end{Verbatim}
+\paragraph*{Korrektheit} Mithilfe von Quickselect suchen wir das k-te Element des Arrays, welches die obere Schranke unseres zu sortierenden Arrayanfangs markiert. Danach gilt für jedes $i,j$ mit $ 1 \le j < k < i \le n $:
+\begin{align*}
+  A[j] \le A[k] \le A[i]
+\end{align*}
+Nun muss lediglich der Array von 1 bis k-1 mit einem Algorithmus in $ O(n\log n) $ sortiert werden. Wir verwenden Quicksort mit zufälliger Pivot-wahl, da die erwartete Laufzeit des Algorithmus $ O(n\log n) $ ist. Nach der Ausführung von Quicksort gilt:
+\begin{align*}
+  A[1] \le \dots \le A[k-1] \le A[k]\quad \text{und}\quad A[k]\le A[i]\ \forall k < i \le n
+\end{align*}
+Dies ist die Bedingung aus der Aufgabenstellung.
+\paragraph*{Laufzeit} QuickSelect läuft in O(n) und unsere Wahl von QuickSort läuft erwartet in $O(n\log n)$. Da jedoch nur von 1 bis $k-1$ sortiert wurde ist die Laufzeit in $ O(k\log k) $. Die Laufzeiten zusammen:
+\begin{align*}
+  O(n) + O(k\log k) = O(n + k\log k)
+\end{align*}
+Die Laufzeitbedingung ist somit erfüllt.

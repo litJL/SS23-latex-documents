@@ -1,15 +1,15 @@
 \section*{Aufgabe 0 vom nächsten Blatt}
 \subsection*{a)}
 \subsubsection*{i)}
-Domänenkalkül (keine Punkte, abändern):
+Domänenkalkül (keine Punktnotation, subnotation verwenden):
 \begin{align*}
 &\{p.pnr,p.vn,p.nn\ |\ \exists p.gehalt \exists p.abteilung | \in P(p.pnr,p.gehalt,p.vn,p.nn,p.abteilung,\_)\\
 &\land \exists m.pnr M(m.pnr,\_,p.abteilung)\land p(m.pnr,p.gehalt,\_,\_,\_,\_)\}
 \end{align*}
 Tupelkalkül:
 \begin{align*}
-  &\{P.pnr,P.vn,P.nn\ |\ p\in P\land \exists m\in M(m.leitet = P.abteilung)\land\\ 
-  &\exists mp\in P(P.pnr = m.pnr \land P.gehalt = mp.gehalt)\}
+  &\{p.pnr,p.vn,p.nn\ |\ p\in P\land \exists m\in M(m.leitet = p.abteilung)\land\\ 
+  &\exists mp\in P(p.pnr = m.pnr \land p.gehalt = mp.gehalt)\}
 \end{align*}
 \subsubsection*{ii)}
 Domänenkalkül:
@@ -18,7 +18,7 @@ Domänenkalkül:
 \end{align*}
 Tupelkalkül:
 \begin{align*}
-&\{a.anr,a.name\ |\ a\in A \land \exists m_1 \in M(a.anr = m.leitet \land\\
+&\{a.anr,a.name\ |\ a\in A \land \exists m_1 \in M(a.anr = m.leitet) \land\\
 &\text{not }\exists m_2 \in M(a.anr = m_2.leitet \land m_1.pnr \not = m_2.pnr))\}
 \end{align*}
 \subsection*{b)}

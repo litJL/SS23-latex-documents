@@ -2,14 +2,14 @@
 \section*{Aufgabe \bn.2}
 \subsection*{a)}
 \subsubsection*{k=2}
-$ \lceil\log_{2}(2!) = 1\rceil \rightarrow $ 1 Vergleich erlaubt.
+$ \lceil\log_{2}(2!)\rceil = 1 \rightarrow $ 1 Vergleich erlaubt.
 \begin{Verbatim}[frame=single]
 if A[0] >= A[1]:
   swap(A[0], A[1])
 \end{Verbatim}
 Klar zu sehen, dass nur ein Vergleich verwendet wird
 \subsubsection*{k=3}
-$ \lceil\log_{2}(3!) = 3\rceil \rightarrow $ 3 Vergleiche erlaubt.
+$ \lceil\log_{2}(3!)\rceil = 3 \rightarrow $ 3 Vergleiche erlaubt.
 \begin{Verbatim}[frame=single]
 if A[0] >= A[1]:
   swap(A[0], A[1])
@@ -20,7 +20,7 @@ if A[0] >= A[1]:
 \end{Verbatim}
 Klar zu sehen, dass nur 3 Vergleiche verwendet werden.
 \subsubsection*{k=4}
-$ \lceil\log_{2}(4!) = 5\rceil \rightarrow $ 5 Vergleiche erlaubt.
+$ \lceil\log_{2}(4!)\rceil = 5 \rightarrow $ 5 Vergleiche erlaubt.
 \begin{Verbatim}[frame=single]
 if A[0] >= A[1]:
   swap(A[0], A[1])
@@ -34,6 +34,8 @@ if A[1] >= A[2]:
   swap(A[1], A[2])
 \end{Verbatim}
 Klar zu sehen, dass nur 5 Vergleiche verwendet werden.
+\subsection*{b)}
+/
 \subsection*{c)}
 \begin{Verbatim}[frame=single]
 b = 0
@@ -50,3 +52,4 @@ for i in range(1,n-1) //(n-2) Vergleiche
     s = i
 swap(A[s],A[0])
 \end{Verbatim}
+Dieser Algorithmus macht (n-1) + (n-2) Vergleiche, jedoch nicht weniger als diese Anzahl.

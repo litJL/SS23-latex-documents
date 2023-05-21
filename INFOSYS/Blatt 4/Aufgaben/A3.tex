@@ -1,0 +1,14 @@
+\pagebreak
+\section*{Aufgabe 3}
+\subsection*{a)}
+\paragraph*{$ \{x,z\ |\ R(x,5)\lor R(10,z)\} $:}
+Nicht sicher wegen der Veroderung ($ \lor $). Wenn ein Teil der Formel erfüllt ist, ist es egal was für einen Wert die Variable im anderen Teil annimmt. Somit gibt es unendlich Ergebnisse.
+\paragraph*{$ \{y\ |\ \exists x\ ((R(x,5,y)\lor R(x,8,y))\land \neg R(x,10,y))\} $:}
+Ist sicher, da bei der Veroderung die selben Variablen an den gleichen Stellen stehen. Im Endeffekt werden alle Reihen gefunden, bei denen die mittlere Spalte entweder 5 oder 8, aber nicht 10, ist. Von diesen Reihen muss es endlich viele geben.
+\paragraph*{$ \{z\ |\ \forall x\exists y\ (S(z,y)\land y<x)\} $:}
+Nicht sicher falls Duplikate erlaubt sind, da x jegliche Zahl sein kann und einträge aus S somit unendlich gefunden werden. Wenn Duplikate nicht erlaubt sind, dann ist das Ergebnis endlich.
+\subsection*{b)}
+\paragraph*{Welche Schauspieler haben in höchstens zehn Filmen mitgespielt?}
+Es ist möglich ein Prädikat zu erstellen, das testet, welche Schauspieler in \emph{mindestens} 10 Filmen mitgespielt haben. Durch die Negation eines solchen Prädikats erhalten wir eine Anfrage, in welcher alle Schauspieler enthalten sind, die in \emph{höchstens} 10 Filmen mitgespielt haben. Die Anfrage kann im Domänenkalkül ausgedrückt werden.
+\paragraph*{Welche Schauspieler haben in genau 5 Filmen mitgespielt?}
+Es ist im Domänenkalkül nicht möglich zu zählen, genau wieviele verbundene Einträge das Prädikat erfüllen, weshalb die Anfrage nicht im Domänenkalkül ausgedrückt werden kann.

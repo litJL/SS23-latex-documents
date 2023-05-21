@@ -1,0 +1,16 @@
+\section*{Aufgabe 1}
+\subsection*{a)}
+\subsubsection*{i)}
+\begin{align*}
+\{ x _{ name }\ |\ \exists x _{ ort }\ \text{SpielStudio}(\_,1,2022,x _{ name } , x _{ ort } ) \}
+\end{align*}
+\subsubsection*{ii)}
+\begin{align*}
+  \{ x _{ name }\ &|\ \exists x_t \exists x_q \exists x_j \exists x _{ ort }\ \text{SpielStudio}(x_t,x_q,x_j,x _{ name } , x _{ ort } )\land \\
+  &\exists y_t \exists y_q \exists y_j\ (\text{SpielStudio}(y_t,y_q,y_j,x _{ name } , x _{ ort } ) \land y_j \ge 2010\ \land \\
+  & \forall z _{ anz }\ (\text{Spiel}(y_t,\_,y_q,y_j,\_,z _{ anz } ) \land z _{ anz } > 1))\}
+\end{align*}
+\subsection*{b)}
+Anz. Spieler ist nicht null und speichert eine tatsächliche Anzahl an möglichen Spielern.\\
+Zwei Spielstudios, welche nicht zusammengearbeitet haben, dürfen keine Spiele mit gleichem Namen im gleichen Zeitraum veröffentlichen.
+

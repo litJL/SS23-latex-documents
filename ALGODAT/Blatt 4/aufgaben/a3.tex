@@ -1,3 +1,20 @@
 \pagebreak
 \section*{Aufgabe \bn.3}
 \subsection*{a)}
+Ein solcher Algorithmus müsste lediglich die k-Blöcke mit bereits bekannten Algorithmen, die in $O(n \log n)$ sortieren, sortieren. Wir nehmen an die funktion \emph{sort} sortiert in $ O(n \log n) $:
+\begin{Verbatim}[frame=single]
+for i in range(k):
+  sort(A, i*k, (i*k) + k) // sort the k-th block
+\end{Verbatim}
+Die Laufzeit für jeden Aufruf von \emph{sort} ist hier $ O(n \log k) $, da nur subarrays von länge k mit jedem Aufruf sortiert werden. Somit gilt für die Laufzeit
+\begin{align*}
+  T(n) \in O(n \log k) + \ldots + O(n \log k) = O(n \log k)
+\end{align*}
+Die Vergleichsschranke wird eingehalten, da:
+\begin{align*}
+  \lim_{n\rightarrow\infty} \frac{ n\log k  }{ n\log(\nicefrac{n}{k})} \overset{l'H}{=} \lim_{n\rightarrow\infty} \frac{ \log k }{ \log(\nicefrac{n}{k})+1 } = \infty\quad \rightarrow \quad n\log k \in o(n \log (\nicefrac{n}{k})) 
+\end{align*}
+\subsection*{b)}
+/
+\subsection*{c)}
+/

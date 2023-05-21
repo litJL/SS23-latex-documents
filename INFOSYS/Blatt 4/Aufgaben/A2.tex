@@ -1,0 +1,17 @@
+\pagebreak
+\section*{Aufgabe 2}
+\subsection*{a)}
+\begin{align*}
+  \{ s.Chefentwickler\ |\ &s \in Studio \land \exists sp \in \text{SpielStudio}(s.Name = sp.Name \land \\
+                          &s.Ort = sp.Ort)\land \exists ld \in \text{Spiel}(sp.Titel = \text{'Left 4 Dead'} \land \\
+                          &sp.Genre = \text{'FPS'} \land sp.Anz.Spieler = 4) \}
+\end{align*}
+\subsection*{b)}
+\begin{align*}
+  \{ spi.Titel\ |\ &\exists s_1 \in Studio \land \exists s_2 \in \text{Studio} \land s_1.Name \not = s_2.Name \land s_1.Ort \not = s_2.Ort \land \\
+                   &\exists sp_1 \in \text{SpielStudio}(s_1.Name = sp_1.Name \land s_1.Ort = sp_1.Ort)\land \\
+                   &\exists sp_2 \in \text{SpielStudio}(s_2.Name = sp_2.Name \land s_2.Ort = sp_2.Ort)\land \\
+                   &spi \in \text{Spiel}(sp_1.Titel = spi.Titel \land sp_2.Titel = spi.Titel \land \\
+                   &sp_1.Quartal = spi.Quartal \land sp_2.Quartal = spi.Quartal \land \\
+                   &sp_1.Jahr = spi.Jahr \land sp_2.Jahr = spi.Jahr)\}
+\end{align*}
