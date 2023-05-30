@@ -1,0 +1,20 @@
+\pagebreak
+\section*{Aufgabe 3}
+$ N_i \rightarrow i $-te aufgedeckte Karte steht\\
+Für $ i=1,\ldots,n $:\\
+\begin{align*}
+&M_i=\begin{cases}
+1&N_i=max_j = 1,\ldots,n\quad N_j\\
+0&\text{sonst}
+\end{cases}\\
+&i \rightarrow M_i=1\\
+&S=\sum_{i=1}^{n}M_i\\
+&\text{Linearität des Erwartungswerts} \rightarrow E(S)=\sum_{i=1}^{n}E(M_i)\\
+&E(M_i)=P(M_i=1)=\frac{1}{i}\\
+\end{align*}
+Die Wahrscheinlichkeit, dass das ausgewählte $ N_i $ die größte Zahl ist, ist $ \frac{1}{i} $, da es $ i $ Karten gibt und jede gleich wahrscheinlich ist.\\
+\begin{align*}
+&E(M_i)=\frac{1}{i}\\
+&E(S)=\sum_{i=1}^{n}\frac{1}{i}\quad n \rightarrow \infty\\
+\end{align*}
+z.B. $ n=4 \rightarrow E(S)= 2.083 $
