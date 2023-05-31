@@ -1,0 +1,36 @@
+\section*{Aufgabe 2}
+\subsection*{a)}
+X und Y sind abhängig, da z.B.:
+\begin{align*}
+&P(X=20) = \nicefrac{1}{2}\\
+&P(Y=0) = \nicefrac{1}{2}\\
+&P(X=20, Y=0) = 1 \neq \nicefrac{1}{4} = P(X=20)\cdot P(Y=0)
+\end{align*}
+Der Erwartungswert und die Varianz sind gegeben durch:
+\begin{align*}
+&E(X\cdot Y) = (20\cdot0)\cdot \frac{ 1 }{ 2 } + (0\cdot10)\cdot \frac{ 1 }{ 2 } = 0\\
+&V(X\cdot Y) = (0-0)^2\cdot \frac{ 1 }{ 2 } + (0\cdot0)^2\cdot \frac{ 1 }{ 2 } = 0
+\end{align*}
+\subsection*{b)}
+X und Y sind unabhängig, da:\\\\
+\begin{tabular}{ c | c | c }
+  n & 50 & 100\\
+  \hline
+  $ P(X = n) $ & $ \nicefrac{1}{2} $ & $ \nicefrac{1}{2} $ \\
+\end{tabular}\\\\
+\begin{tabular}{ c | c | c }
+  n & 2 & 10\\
+  \hline
+  $ P(Y = n) $ & $ \nicefrac{1}{2} $ & $ \nicefrac{1}{2} $ \\
+\end{tabular}\\\\
+\begin{tabular}{ c | c | c | c | c }
+  n & 100 & 200 & 500 & 1000\\
+  \hline
+  $ P(X\cdot Y = n) $ & $ \nicefrac{1}{4} $ & $ \nicefrac{1}{4} $& $ \nicefrac{1}{4} $& $ \nicefrac{1}{4} $ \\
+\end{tabular}\\\\
+Wobei klar zu sehen ist, dass $ P(X\cdot Y) = P(X)\cdot P(Y) $ gilt.\\\\
+Der Erwartungswert und die Varianz sind gegeben durch:
+\begin{align*}
+&E(X\cdot Y) = 200 \cdot \frac{ 1 }{ 4 } + 500 \cdot \frac{ 1 }{ 4 } + 100 \cdot \frac{ 1 }{ 4 } + 1000 \cdot \frac{ 1 }{ 4 } = 450 \\
+&V(X\cdot Y) = (200-450)^2\cdot \frac{ 1 }{ 4 } + (500-450)^2\cdot \frac{ 1 }{ 4 } + (100-450)^2\cdot \frac{ 1 }{ 4 } + (1000-450)^2\cdot \frac{ 1 }{ 4 } = 122500
+\end{align*}
