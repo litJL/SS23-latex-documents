@@ -1,0 +1,7 @@
+firma
+localhost
+5432
+postgres
+postgres
+2016
+IT
