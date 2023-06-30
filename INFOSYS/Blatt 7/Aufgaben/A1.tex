@@ -1,0 +1,59 @@
+\section*{Aufgabe 1}
+\subsection*{a)}
+Löschungen:\\
+Klinik: (4,'Dummy-Klinik')
+\subsection*{b)}
+Löschungen:\\
+Klinik: (2,'Alpecinklinik Hamburg');
+Chirurg: (2, 'Dr. Klenk', 2);
+Patient: (2, 'John Doe', 2);
+Behandlung: (2,2);
+\subsection*{c)}
+Löschungen:\\
+Klinik: (3,'Klinik G-Funk');\\
+Abänderungen:\\
+Patient: (3, 'Jane Smith', NULL);
+\subsection*{d)}
+Löschungen:\\
+Klinik: (1,'Backhaus Oetker');\\
+Abänderungen:\\
+Chirurg: (1, 'Dr. Oetker', NULL) (3, 'Dr. Dre', NULL);
+Patient: (1, 'Max Mustermann', NULL);
+\subsection*{e)}
+Löschungen:\\
+Klinik: (1, 'Backhaus Oetker');\\
+Chirurg: (1, 'Dr. Oetker', 1) (3, 'Dr. Dre', 1);\\
+Patient: (1, 'Max Mustermann', 1);
+Behandlung: (1,1) (1,3);
+\subsection*{f)}
+Löschungen:\\
+Klinik: (1, 'Backhaus Oetker');\\
+Chirurg: (1, 'Dr. Oetker', 1) (3, 'Dr. Dre', 1);\\
+Patient: (1, 'Max Mustermann', 1);
+Behandlung: (1,1);
+Abänderungen:\\
+Behandlung: (1, NULL) - War vorher Eintrag (1,3)
+\subsection*{g)}
+Löschungen:\\
+Klinik: (1, 'Backhaus Oetker');\\
+Chirurg: (1, 'Dr. Oetker', 1) (3, 'Dr. Dre', 1);\\
+Patient: (1, 'Max Mustermann', 1);
+Behandlung: (1,1) (1,3);
+\subsection*{h)}
+Löschungen:\\
+Klinik: (3, 'Klinik G-Funk');\\
+Patient: (3, 'Jane Smith', 3);\\
+Abänderungen:\\
+Behandlung: (1, NULL) - War vorher Eintrag (1,3);
+\subsection*{i)}
+Wird nicht durchgeführt, da ref(D) DELETE RESTRICT ist und Patient Jane Smith gelöscht wird (wegen DELETE CASCADE). Es existiert jedoch der Eintrag (1,3) in Behandlung, weshalb es nicht funktioniert.\\
+\subsection*{j)}
+Es können reihenfolgenahängige Ergebnisse auftreten.\\
+Fall 1: Klinik -> Chirurg -> Behandlung -> Patient\\
+Löschungen:\\
+Klinik: (1, 'Backhaus Oetker');\\
+Chirurg: (1, 'Dr. Oetker', 1) (3, 'Dr. Dre', 1);\\
+Behandlung: (1,1) (1,3);\\
+Patient: (1, 'Max Mustermann', 1);\\\\
+Fall 2: Klinik -> Patient -> Behandlung -> Chirurg\\
+Schlägt fehl, da Max Mustermann gelöscht wird, jedoch in Behandlung noch ein Eintrag existiert, welcher Max Mustermann referenziert.\\

@@ -1,0 +1,13 @@
+\section*{Aufgabe 1}
+\begin{align*}
+  &Y=X_1 + X_2 \\
+  &\underbar{E(Y)} = E(X_1 + X_2) = E(X_1) + E(X_2) = 1.4 + 0.6 = 2 \\
+  &\underbar{V(Y)} = V(X_1 + X_2) = V(X_1) + V(X_2) + 2\cdot \text{Cov}(X_1,X_2) = 0.24 + 0.64 + 2\cdot (-0.24) = 0.4 \\
+  &E(X_1) = 1\cdot 0.6 + 2\cdot 0.4 = 1.4 \\
+  &E(X_2) = -1\cdot 0.2 + 1\cdot 0.8 = 0.6 \\
+  &V(X_1) = (1-1.4)^2\cdot 0.6 + (2-1.4)^2\cdot 0.4 = 0.24 \\
+  &V(X_2) = (-1-0.6)^2\cdot 0.2 + (1-0.6)^2\cdot 0.8 = 0.64 \\
+  &\text{Cov}(X_1,X_2) = E(X_1\cdot X_2) - E(X_1)\cdot E(X_2) = 0.6-1.4\cdot 0.6 = -0.24 \\
+  &E(X_1\cdot X_2) = -1\cdot 0 + 1\cdot 0.6 -2\cdot 0.2 + 2\cdot 0.2 = 0.6 \\ 
+  &\underbar{\text{Corr}($X_1,X_2$)} = \frac{\text{Cov}(X_1,X_2)}{\sqrt{V(X_1)}\cdot\sqrt{ V(X_2)}} = \frac{-0.24}{ \sqrt{0.24}\cdot\sqrt{0.64}} = -0.6123
+\end{align*}

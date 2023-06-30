@@ -1,0 +1,24 @@
+\pagebreak
+\section*{Aufgabe 4}
+\subsection*{a)}
+\subsubsection*{i)}
+Das Tupel kann in v1 und v2 eingefügt werden, da die Bedingungen b <= 20 sowie a <= 10 in der View Definition erfüllt sind. Das Tupel kann jedoch nicht in v3 eingefügt werden, da die Bedingung b <= 5 verletzt wird.
+\subsubsection*{ii)}
+Das Tupel kann wieder in v1 eingefügt werden, da die Bedingung in der View Definition erfüllt ist. Das Tupel kann auch in v2 eingefügt werden, jedoch wird hier nicht geprüft ob b <= 20 ist. Das Tupel kann nicht in v3 eingefügt werden, da die Bedingung b <= 5 wieder verletzt wird.
+\subsubsection*{iii)}
+Das Tupel kann in v1 eingefügt werden. Das Tupel kann nicht in v2 eingefügt werden, da die Bedingung a <= 10 verletzt wird. Das Tupel kann in v3 eingefügt werden, da die Bedingung b <= 5 erfüllt ist. Die kaskadierende check option macht hier keinen Unterschied.
+\subsubsection*{iv)}
+Das Tupel kann nicht in v1 eingefügt werden, da die Bedingung b <= 20 verletzt wird. Das Tupel kann in v2 eingefügt werden, da die Bedingung a <= 10 erfüllt ist. Das Tupel kann nicht in v3 eingefügt werden, da die Bedingung b <= 5 verletzt wird. Die lokale check option macht hier auch keinen Unterschied.
+\subsection*{b)}
+\begin{verbatim}
+  CREATE TABLE pruefen (
+    matrnr INT,
+    vorlnr INT,
+    persnr INT,
+    note NUMERIC(2,1) CHECK (note IN (1.0, 1.3, 1.7, 2.0, 2.3, 2.7,
+                                      3.0, 3.3, 3.7, 4.0, 5.0)),
+    FOREIGN KEY (matrnr) REFERENCES studenten (matrnr),
+    FOREIGN KEY (vorlnr) REFERENCES vorlesungen (vorlnr),
+    FOREIGN KEY (persnr) REFERENCES professoren (persnr),
+  );
+\end{verbatim}

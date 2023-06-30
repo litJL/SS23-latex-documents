@@ -1,0 +1,12 @@
+\section*{Aufgabe 1}
+\subsection*{b)}
+$ V(X_1\cdot X_2)=\underbrace{V(X_1)\cdot E(X_2)^2 + E(X_1)^2\cdot V(X_2) + V(X_1)\cdot V(X_2)}_* $: \\
+\begin{align*}
+  * &= (\cancel{E(X_1^2)}- E(X_1)^2)\cdot \cancel{E(X_2)^2} + E(X_1)^2\cdot (E(X_2^2)-E(X_2)^2) + (\cancel{E(X_1^2)}-\cancel{E(X_1)^2})\cdot \\
+  &\quad\ (\cancel{E(X_2^2)}-\cancel{E(X_2)^2}) \\
+  &=E(X_1^2)\cdot E(X_2)^2 - 2\cdot E(X_1)^2\cdot E(X_2)^2 + E(X_1)^2\cdot E(X_2^2) + E(X_1)^2\cdot E(X_2)^2 \\
+  &=E(X_1^2)\cdot E(X_2^2) - E(X_1)^2\cdot E(X_2)^2\\
+  &=E(X_1^2)\cdot E(X_2^2) - E(X_1\cdot X_2)^2\\
+  &=E(X_1^2\cdot X_2^2) - E(X_1\cdot X_2)^2 \\
+  &=V(X_1\cdot X_2)
+\end{align*}

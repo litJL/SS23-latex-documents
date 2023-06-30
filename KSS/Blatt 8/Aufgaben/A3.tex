@@ -1,0 +1,61 @@
+\pagebreak
+\section*{Aufgabe 3}
+\subsection*{a)}
+Wir setzten die Informationen aus der Aufgabenstellung in die Tschebyscheffsche Ungleichung ein:
+\begin{align*}
+  P(|S_n - \mu|\le 0.5) \ge 0.98 = \frac{ \sigma^2 }{n\cdot\varepsilon^2 }
+\end{align*}
+Durch umstellen erhalten wir:
+\begin{align*}
+  n = \frac{ \sigma^2 }{0.98 \cdot 0.5^2 }
+\end{align*}
+Wobei $ \sigma^2 $ folgendermaßen definiert ist:
+\begin{align*}
+  \sigma^2 = E(X_i^2) - E(X_i)^2
+\end{align*}
+Wir müssen lediglich eine Zufallsvariable $ X_i $ betrachten, da alle Zufallsvariablen gleich sind.
+Wir berechnen $ E(X_i^2) $ und $ E(X_i)^2 $:
+\begin{align*}
+  E(X_i^2) &= \sum_{j=1}^{m} j^2 \cdot \frac{ 1 }{ m } = \frac{ 1 }{ m } \cdot \sum_{j=1}^{m}j^2 = \frac{ 1 }{ \cancel{m} } \cdot \frac{ \cancel{m}\cdot (m+1)(2m+1) }{ 6 }  = \frac{ (m+1)(2m+1) }{ 6 }
+\end{align*}
+\begin{align*}
+  E(X_i)^2 &= \left(\sum_{j=1}^{m} j \cdot \frac{ 1 }{ m }\right)^2 = \left(\frac{ 1 }{ m } \cdot \sum_{j=1}^{m}j\right)^2 = \left(\frac{ 1 }{ \cancel{m} } \cdot \frac{ \cancel{m}\cdot (m+1) }{ 2 }\right)^2 = \left(\frac{ (m+1) }{ 2 }\right)^2 = \frac{ (m+1)^2 }{ 4 }\\
+\end{align*}
+Also:
+\begin{align*}
+  \sigma^2 &= E(X_i^2) - E(X_i)^2 = \frac{ (m+1)(2m+1) }{ 6 } - \frac{ (m+1)^2 }{ 4 } = \frac{ 2\cdot (2m^2+3m+ 1) }{ 12 } - \frac{ 3m^2 + 6m + 3 }{ 12 }\\ &=\frac{ m^2-1}{ 12 }
+\end{align*}
+Nun können wir für $ \sigma^2 $ einsetzen:
+\begin{align*}
+  n &= \frac{ \sigma^2 }{0.98 \cdot 0.5^2 } = \frac{ \frac{ m^2-1 }{ 12 } }{0.98 \cdot 0.5^2 } = \frac{ m^2-1 }{ 12 \cdot 0.98 \cdot 0.5^2 } = \frac{ m^2-1 }{ 2.94 }\\
+\end{align*}
+Die Anzahl an benötigten Versuchen lässt sich also aus mit $ m $ berechnen.
+\subsection*{b)}
+Wir setzen wieder die Informationen aus der Aufgabenstellung in die Tschebyscheffsche Ungleichung ein:
+\begin{align*}
+  P(|S_n - 0.5|\le 0.01) \ge 0.96 = \frac{ \sigma^2 }{n\cdot 0.01^2 }
+\end{align*}
+Durch umstellen erhalten wir:
+\begin{align*}
+  n = \frac{ \sigma^2 }{0.96 \cdot 0.01^2 }
+\end{align*}
+$ \sigma^2 $ ist wie in a) definiert:
+\begin{align*}
+  \sigma^2 = E(X_i^2) - E(X_i)^2
+\end{align*}
+Wir berechnen $ E(X_i^2) $ und $ E(X_i)^2 $:
+\begin{align*}
+  E(X^2) = 0^2 \cdot \frac{ 1 }{ 2 } + 1^2 \cdot \frac{ 1 }{ 2 } = 0.5
+\end{align*}
+\begin{align*}
+  E(X)^2 = 0.5^2 = 0.25
+\end{align*}
+Also:
+\begin{align*}
+  \sigma^2 &= E(X_i^2) - E(X_i)^2 = 0.5 - 0.25 = 0.25
+\end{align*}
+Nun können wir für $ \sigma^2 $ einsetzen:
+\begin{align*}
+  n &= \frac{ \sigma^2 }{0.96 \cdot 0.01^2 } = \frac{ 0.25 }{0.96 \cdot 0.01^2 } = 2604.17
+\end{align*}
+Also sind 2605 Versuche nötig.

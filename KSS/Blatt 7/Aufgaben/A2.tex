@@ -1,0 +1,37 @@
+\pagebreak
+\section*{Aufgabe 2}
+\subsection*{a)}
+\begin{align*}
+  \text{Corr}(X,a\cdot X+b) &= \frac{ \text{Cov}(X,a\cdot X+b) }{ \sqrt{V(X)}\cdot \sqrt{V(a\cdot X+b)} } \\
+  &= \frac{ E(X - E(X))\cdot E(a\cdot X + b -E(a\cdot X+b)) }{ \sqrt{V(X)}\cdot \sqrt{a^2 \cdot V(X)} } \\
+  &= \frac{ E(X - E(X))\cdot E(a\cdot X + \cancel{b} -a\cdot E(X)\cancel{-b}) }{ \sqrt{a^2} \cdot V(X) } \\
+  &= \frac{ E(X - E(X))\cdot a\cdot E(X - E(X)) }{ \sqrt{a^2} \cdot V(X) } \\
+  &= \frac{ a\cdot E((X - E(X))^2) }{ \sqrt{a^2} \cdot V(X) } \\
+  &= \frac{ a\cdot \cancel{V(X)} }{ \sqrt{a^2} \cdot \cancel{V(X)} } \\
+  &= \frac{ a }{ \sqrt{a^2} } \\
+\end{align*}
+Da $\sqrt{a^2} = |a|$ ist, gilt:
+\begin{align*}
+  \text{Corr}(X,a\cdot X+b) = \frac{ a }{ |a| } = \begin{cases}
+    1 & \text{falls } a > 0 \\
+    -1 & \text{falls } a < 0
+  \end{cases}
+\end{align*}
+\subsection*{b)}
+Zu zeigen:
+\begin{align*}
+\text{Corr}(X,Y) = \frac{ \text{Cov}(X,Y) }{ \sigma(X)\cdot \sigma(Y) } \ge 0
+\end{align*}
+Da $\sigma(X)$ und $\sigma(Y)$ immer größer gleich 0 sind, muss nur noch gezeigt werden, dass $\text{Cov}(X,Y)$ immer größer gleich 0 ist. Also: \\
+\begin{align*}
+  \text{Cov}(X,Y) = E(X\cdot Y) - E(X)\cdot E(Y) \ge 0
+\end{align*}
+Da wir wissen, dass $ E(X) = E(-X) $ ist können wir folgern, dass $ E(X) = 0 $ sein muss, da für die Werte eine Symmetrie um den Wert 0 gefordert ist, wofür der Erwartungswert 0 sein muss. Damit ist nun folgendes zu zeigen: \\
+\begin{align*}
+  \text{Cov}(X,Y) = E(X\cdot Y) \ge 0
+\end{align*}
+Da $ Y(\omega) $ immer 0 ist für jeden Negativen Wert von X kann $ X\cdot Y $ keine Negativen Werte beinhalten. Damit ist $ E(X\cdot Y) \ge 0 $ und somit auch $ \text{Cov}(X,Y) \ge 0 $.
+Letztendlich gilt also:
+\begin{align*}
+  \text{Corr}(X,Y) = \frac{ \text{Cov}(X,Y) }{ \sigma(X)\cdot \sigma(Y) } \ge 0
+\end{align*}

@@ -13,3 +13,18 @@ $ P(X_1\cdot X_3 = n) $& \nicefrac{1}{2} & \nicefrac{3}{8} & \nicefrac{1}{8} \\
 $ P(X_2\cdot X_3 = n) $& \nicefrac{5}{8} & \nicefrac{1}{8} & \nicefrac{1}{8} & \nicefrac{1}{8} \\
 \end{tabular}
 \subsection*{b)}
+\begin{align*}
+&\text{Cov}(X_1,X_3)=E(X_1\cdot X_3)-E(X_1)\cdot E(X_3)\\
+&E(X_1)=0\cdot \frac{ 1 }{ 2 } + 1\cdot \frac{ 1 }{ 2 } = 0.5\\
+&E(X_3)=0\cdot \frac{ 1 }{ 8 } + 1\cdot \frac{ 3 }{ 8 } + 2\cdot \frac{ 3 }{ 8 } + 3\cdot \frac{ 1 }{ 8 } +  = 1.5\\
+&E(X_1\cdot X_3)=0\cdot \frac{ 1 }{ 2 } + 1\cdot \frac{ 3 }{ 8 } + 3\cdot \frac{ 1 }{ 8 } = 0.75\\
+&\text{Cov}(X_1,X_3)=0.75-0.5\cdot 1.5 = 0\\
+\end{align*}
+Da $ \text{Cov}(X_1,X_3)= 0 $ ist $ \text{Corr}(X_1,X_3)= 0 $.\\
+\begin{align*}
+&\text{Cov}(X_2,X_3)=E(X_2\cdot X_3)-E(X_2)\cdot E(X_3)\\
+&E(X_2)=0\cdot \frac{ 1 }{ 2 } + 1\cdot \frac{ 1 }{ 2 } = 0.5\\
+&E(X_2\cdot X_3)=0\cdot \frac{ 5 }{ 8 } + 1\cdot \frac{ 1 }{ 8 } + 2\cdot \frac{ 1 }{ 8 } + 3\cdot \frac{ 1 }{ 8 } = 0.75\\
+&\text{Cov}(X_2,X_3)=0.75-0.5\cdot 1.5 = 0\\
+\end{align*}
+Da $ \text{Cov}(X_2,X_3)= 0 $ ist $ \text{Corr}(X_2,X_3)= 0 $.\\

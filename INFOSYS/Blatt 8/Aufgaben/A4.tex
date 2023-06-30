@@ -1,0 +1,30 @@
+\pagebreak
+\section*{Aufgabe 4}
+\subsection*{a)}
+Timestamp ist ein Superschlüssel (Und Kandidatenschlüssel da es nur eine Spalte ist), da es keine Tupel gibt, bei denen Timestamp gleich sein kann. 
+
+Die restlichen Spalten sind keine Superschlüssel, da selbst SachbearbeiterID, KundeID, Nachricht, Richtung $ \rightarrow  $ Timestamp nicht erfüllt ist, denn es ist z.B. möglich für einen Sacharbeiter einem Kunden zwei mal die gleiche Nachricht zu schicken, natürlich zu verschiedenen Zeitpunkten, womit das Wissen über den Sacharbeiter, Kunden, die Nachricht und die Richtung nicht den Timestamp klar definiert. \\\\
+Also ist die einzige Sinnvolle FD: \\
+Timestamp $ \rightarrow  $ SachbearbeiterID, KundeID, Nachricht, Richtung \\\\
+Andere (Weniger sinnvolle, jedoch trotzdem korrekte) FDs wären z.B.: \\
+SachbearbeiterID, KundeID, Timestamp $ \rightarrow  $ Nachricht, Richtung \\
+Nachricht, Richtung, Timestamp $ \rightarrow  $ SachbearbeiterID, KundeID \\
+usw. \\\\
+All diese Regeln lassen sich aus Timestamp $ \rightarrow  $ SachbearbeiterID, KundeID, Nachricht, Richtung ableiten.
+\subsection*{b)}
+\subsubsection*{i)}
+Die Zerlegung ist verlustlos, da für beide Relationen gilt: \\
+Bei $ R_1 $: Timestamp $ \rightarrow  $ SachbearbeiterID, KundeID \\
+Bei $ R_2 $: Timestamp $ \rightarrow  $ Nachricht, Richtung \\\\
+Zudem ist $ R_1 \cap R_2 = $ Timestamp  wodurch: \\
+Timestamp $ \rightarrow  $ SachbearbeiterID, KundeID $ \in F^+_R $ \\\\
+Also ist die Zerlegung laut Defininition verlustlos.
+\subsubsection*{ii)}
+Die Zerlegung ist abhängigkeitserhaltend, da für beide Relationen gilt: \\
+Bei $ R_1 $: Timestamp $ \rightarrow  $ SachbearbeiterID, KundeID \\
+Bei $ R_2 $: Timestamp $ \rightarrow  $ Nachricht, Richtung \\\\
+Laut der Vereinigungsregel können wir bilden: \\
+Timestamp $ \rightarrow  $ SachbearbeiterID, KundeID, Nachricht, Richtung \\\\
+Somit haben wir:\\
+$ F_R \equiv (F_{R_1} \cup F_{R_2})$\\
+Also ist die Zerlegung laut Defininition abhängigkeitserhaltend.
